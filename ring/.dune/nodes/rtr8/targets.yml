@@ -1,0 +1,5 @@
+rtr8.bird.quic.conf: /tmp/rtr8.bird.quic.conf
+rtr8.bird.tcp.conf: /tmp/rtr8.bird.tcp.conf
+rtr8.bird.tcp_ao.conf: /tmp/rtr8.bird.tcp_ao.conf
+rtr8.bird.tls.conf: /tmp/rtr8.bird.tls.conf
+rtr8.bird.tls_ao.conf: /tmp/rtr8.bird.tls_ao.conf

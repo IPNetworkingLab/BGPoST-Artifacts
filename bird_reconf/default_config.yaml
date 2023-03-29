@@ -1,0 +1,4 @@
+local_certificate: "/tmp/bird1/bird1.cert.pem"
+local_key: "/tmp/bird1/bird1.key"
+root_ca: "/tmp/root_ca.cert.pem"
+router_id: "192.168.42.1"

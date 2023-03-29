@@ -1,0 +1,13 @@
+peer: s2
+filter_name: import_anycast
+filter: |
+  filter import_anycast {
+    if (net = 192.0.2.1/32) then {
+      bgp_community.add((65535, 1));
+      accept;
+    }
+    if (net ~ [ 10.21.42.0/24{24,32} ] ) then {
+      accept;
+    }
+    reject;
+  }

@@ -1,0 +1,73 @@
+
+infrastructure:
+  nodes:
+    # core 20, 21, 22, 23 are reserved for the kernel
+    glutenfree:
+      cores: [
+        [0, 1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10, 11],
+        [12, 13, 14, 15, 16, 17],
+        [18, 19],
+      ]
+
+topology:
+  defaults:
+    links:
+      latency: 15ms
+      metric: 1
+      mtu: 1500
+      bw: 1gbit
+
+    nodes:
+      # sysctls are applied on node creation
+      sysctls:
+        net.ipv6.conf.default.keep_addr_on_down: 1
+        net.ipv4.udp_rmem_min: 212992 # default value of net.core_rmem_default
+        net.ipv4.udp_wmem_min: 212992 # default value of net.core_wmem_default
+
+      # execs are applied once the topo has been built
+      exec:
+        - mkdir -p /dev/shm/tls_magic_ao/{{node}}
+
+      templates:
+        bird.tls_magic_ao.conf: /dev/shm/tls_magic_ao/{{node}}/{{node}}.bird.tls_magic_ao.conf
+
+      # processes are applied once the topo has been built
+      pinned:
+        - cmd: ./bird -s /dev/shm/tls_magic_ao/{{node}}/bird.sk -fc /dev/shm/test_perf/{{node}}.bird.conf -P /dev/shm/test_perf/{{node}}/bird.pid > /dev/shm/test_perf/{{node}}/{{bird}}.std 2>&1 &
+          environ:
+            IO_QUIC_CORE_ID: "{{core_1}}"
+          down: kill $(cat /dev/shm/tls_magic_ao/{{node}}/bird.pid)
+          pre_down:
+            - echo 'Killing node <{{node}}>'
+
+      asn: '%fun helpers.get_asn("{{node}}")'
+      rid: '%fun helpers.get_rid("{{node}}")'
+      work_dir: /dev/shm/tls_magic_ao
+
+  links:
+    - endpoints: ["rtr1:eth0", "rtr2:eth1"]
+
+  nodes:
+    rtr1:
+      addrs:
+        eth0: ["172.16.0.0/31", "fc01::/127"]
+      neighbors:
+        rtr2:
+          direction: downstream
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth0'][0]}}')"
+          neighbor:
+            v4: 172.16.0.1
+            asn: "%fun helpers.get_asn('rtr2')"
+    rtr2:
+      addrs:
+        eth1: ["172.16.0.1/31", "fc01::1/127"]
+      neighbors:
+        rtr1:
+          direction: upstream
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth1'][0]}}')"
+          neighbor:
+            v4: 172.16.0.0
+            asn: "%fun helpers.get_asn('rtr1')"

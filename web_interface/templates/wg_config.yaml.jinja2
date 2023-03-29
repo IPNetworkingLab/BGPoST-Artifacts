@@ -1,0 +1,13 @@
+type: cmds
+description: "{% if local %}Local{% else %}Remote{% endif %} Config (AS1)"
+cmds:
+  - echo "{{ psk_key }}" > "/tmp/psk.key"
+  - echo "{{ wg_pkey }}" > "/tmp/priv.key"
+  - ip link add dev {{ wg_dev_name }}
+  - ip addr add {{ wg_ipv6_addr }} dev {{ wg_dev_name }}
+  - wg set {{ wg_dev_name }} listen-port {{ wg_listen_port }} private_key /tmp/priv.key
+  - wg set {{ wg_dev_name }} peer {{ wg_public_key_peer }} preshared-key "/tmp/psk.key" endpoint {{ remote_ip }}:{{ remote_port }} allowed_ip {% for allowed_pfx in allowed_pfxs %}
+  {{ allowed_pfx }}{% if not loop.last %},{% endif %}
+  {% endfor %}
+  - ip link set {{ wg_dev_name }} up
+  - rm /tmp/psk.key /tmp/priv.key

@@ -1,0 +1,26 @@
+protocol bgp as2_r1 {
+  description "";
+  local {{ local_ip }} as 65001;
+  neighbor {{ neighbor_ip }} as 65002;
+  multihop;
+
+  transport tls;
+  tls root ca "/path/to/{{ root_ca_name }}";
+  tls certificate "/path/to/{{ cert_name }}";
+  tls pkey "/path/to /{{ priv_key_name }}";
+  tls peer sni "{{ remote_sni }}";
+  tls local sni "{{ local_sni }}";
+
+  keepalive time 10;
+  hold time 30;
+
+  ipv4 {
+    import all;
+    export all;
+  };
+
+  ipv6 {
+    import all;
+    export all;
+  };
+}

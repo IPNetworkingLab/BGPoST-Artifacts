@@ -1,0 +1,5 @@
+[submodule "cert-generator"]
+	path = cert-generator
+	url = git@forge.uclouvain.be:inl/netutilsg/cert-generator.git
+[submodule "cert-generator/"]
+	url = git@forge.uclouvain.be:inl/netutilsg/cert-generator.git

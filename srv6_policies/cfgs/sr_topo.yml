@@ -1,0 +1,119 @@
+infrastructure:
+  nodes:
+    # core 20, 21, 22, 23 are reserved for the kernel
+    glutenfree:
+      cores: [
+        [0, 1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10, 11],
+        [12, 13, 14, 15, 16, 17],
+        [18, 19],
+      ]
+
+topology:
+  defaults:
+    links:
+      latency: 10ms
+      metric: 1
+      mtu: 1500
+      bw: 1gbit
+
+    nodes:
+      # sysctls are applied on node creation
+      sysctls:
+        net.ipv6.conf.default.keep_addr_on_down: 1
+        net.ipv4.udp_rmem_min: 212992 # default value of net.core_rmem_default
+        net.ipv4.udp_wmem_min: 212992 # default value of net.core_wmem_default
+        net.ipv6.conf.default.seg6_enabled: 1
+        net.ipv6.conf.all.seg6_enabled: 1
+        net.ipv6.conf.all.forwarding: 1
+
+
+      # execs are applied once the topo has been built
+      exec:
+        - mkdir -p /dev/shm/sr_topo/{{node}}
+
+      templates:
+        bird.ospf.conf: /dev/shm/sr_topo/{{node}}/{{node}}.conf
+
+      # processes are applied once the topo has been built
+      pinned:
+        - cmd: ./bird -s /dev/shm/sr_topo/{{node}}/bird.sk -fc /dev/shm/sr_topo/{{node}}.bird.conf -P /dev/shm/sr_topo/{{node}}/bird.pid > /dev/shm/sr_topo/{{node}}/{{bird}}.std 2>&1 &
+          environ:
+            IO_QUIC_CORE_ID: "{{core_1}}"
+          down: kill $(cat /dev/shm/sr_topo/{{node}}/bird.pid)
+          pre_down:
+            - echo 'Killing node <{{node}}>'
+
+      asn: '%fun helpers.get_asn_ospf("{{node}}")'
+      rid: '%fun helpers.id_to_ipv4(helpers.get_id_ospf("{{node}}"))'
+      work_dir: /dev/shm/sr_topo
+
+  links:
+    - endpoints: ["n1:eth0", "n2:eth1"]
+    - endpoints: ["n1:eth2", "n7:eth3"]
+    - endpoints: ["n2:eth4", "n3:eth5"]
+    - endpoints: ["n7:eth6", "n6:eth7"]
+    - endpoints: ["n3:eth8", "n6:eth9"]
+    - endpoints: ["n3:eth10", "n4:eth11"]
+    - endpoints: ["n6:eth12", "n5:eth13"]
+    - endpoints: ["n4:eth14", "n5:eth15"]
+    - endpoints: ["n6:eth16", "n8:eth17"]
+    - endpoints: ["n8:eth18", "n5:eth19"]
+
+  nodes:
+    n1:
+      addrs:
+        lo: ["fe80::1/64", "fc01::1/128"]
+      interfaces:
+        eth0:
+        eth2:
+    n2:
+      addrs:
+        lo: ["fe80::2/64", "fc01::2/128"]
+      interfaces:
+        eth1:
+        eth4:
+    n3:
+      addrs:
+        lo: ["fe80::3/64", "fc01::3/128"]
+      interfaces:
+        eth5:
+        eth8:
+        eth10:
+          cost: "100"
+    n4:
+      addrs:
+        lo: ["fe80::4/64", "fc01::4/128"]
+      interfaces:
+        eth11:
+          cost: "100"
+        eth14:
+    n5:
+      addrs:
+        lo: ["fe80::5/64", "fc01::5/128"]
+      interfaces:
+        eth13:
+        eth15:
+        eth19:
+          cost: "100"
+    n6:
+      addrs:
+        lo: ["fe80::6/64", "fc01::6/128"]
+      interfaces:
+        eth7:
+        eth9:
+        eth12:
+        eth16:
+    n7:
+      addrs:
+        lo: ["fe80::7/64", "fc01::7/128"]
+      interfaces:
+        eth3:
+        eth6:
+    n8:
+      addrs:
+        lo: ["fe80::8/64", "fc01::8/128"]
+      interfaces:
+        eth17:
+        eth18:
+          cost: "100"

@@ -1,0 +1,5 @@
+gobgp.bird.quic.conf: /tmp/gobgp.bird.quic.conf
+gobgp.bird.tcp.conf: /tmp/gobgp.bird.tcp.conf
+gobgp.bird.tcp_ao.conf: /tmp/gobgp.bird.tcp_ao.conf
+gobgp.bird.tls.conf: /tmp/gobgp.bird.tls.conf
+gobgp.bird.tls_ao.conf: /tmp/gobgp.bird.tls_ao.conf

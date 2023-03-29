@@ -1,0 +1,141 @@
+infrastructure:
+  nodes:
+    # core 20, 21, 22, 23 are reserved for the kernel
+    glutenfree:
+      cores: [
+        [0, 1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10, 11],
+        [12, 13, 14, 15, 16, 17],
+        [18, 19],
+      ]
+
+topology:
+  defaults:
+    links:
+      latency: 10ms
+      metric: 1
+      mtu: 1500
+      bw: 1gbit
+
+    nodes:
+      # sysctls are applied on node creation
+      sysctls:
+        net.ipv6.conf.default.keep_addr_on_down: 1
+        net.ipv4.ip_forward: 1
+        net.ipv4.udp_rmem_min: 4096000
+        net.ipv4.udp_wmem_min: 4096000
+
+      # execs are applied once the topo has been built
+      exec:
+        - mkdir -p /dev/shm/anycast_topo/{{node}}
+
+      templates:
+        bird_reconf.conf: /dev/shm/anycast_topo/{{node}}/{{node}}.bird.conf
+        nsd.conf.jinja2: /dev/shm/anycast_topo/{{node}}/{{node}}.nsd.conf
+        #lighttpd.conf: /dev/shm/anycast_topo/{{node}}/{{node}}.lighttpd.conf
+
+      # processes are applied once the topo has been built
+      pinned:
+        - cmd: ./bird -s /dev/shm/anycast_topo/{{node}}/bird.sk -fc /dev/shm/anycast_topo/{{node}}.bird.conf -P /dev/shm/anycast_topo/{{node}}/bird.pid > /dev/shm/anycast_topo/{{node}}/{{bird}}.std 2>&1 &
+          environ:
+            IO_QUIC_CORE_ID: "{{core_1}}"
+          down: kill $(cat /dev/shm/anycast_topo/{{node}}/bird.pid)
+          pre_down:
+            - echo 'Killing node <{{node}}>'
+
+      work_dir: /dev/shm/anycast_topo
+
+  links:
+    - endpoints: ["r1:eth0", "r2:eth1"]
+    - endpoints: ["c1:eth2", "r1:eth3"]
+    - endpoints: ["c2:eth4", "r2:eth5"]
+    - endpoints: ["s1:eth6", "r1:eth7"]
+    - endpoints: ["s2:eth8", "r2:eth9"]
+
+  nodes:
+    r1:
+      asn: "65000"
+      rid: "0.0.0.1"
+      addrs:
+        eth0: ["fc01::/127", "10.21.42.0/31"]
+        eth3: ["fc01::3/127", "10.21.42.3/31"]
+        eth7: ["fc01::7/127", "10.21.42.7/31"]
+      neighbors:
+        r2:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth0'][1]}}')"
+          neighbor:
+            v4: "10.21.42.1"
+            asn: "65001"
+        s1:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth7'][1]}}')"
+          neighbor:
+            v4: "10.21.42.6"
+            asn: "65003"
+          anycast:
+          passive:
+    r2:
+      asn: "65001"
+      rid: "0.0.0.2"
+      enable_control_srv:
+      addrs:
+        eth1: ["fc01::1/127", "10.21.42.1/31"]
+        eth5: ["fc01::5/127", "10.21.42.5/31"]
+        eth9: ["fc01::9/127", "10.21.42.9/31"]
+      neighbors:
+        r1:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth1'][1]}}')"
+          neighbor:
+            v4: "10.21.42.0"
+            asn: "65000"
+        s2:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth9'][1]}}')"
+          neighbor:
+            v4: "10.21.42.8"
+            asn: "65004"
+          anycast:
+          passive:
+          no_export:
+    c1:
+      #exec:
+      #  - ip route add default via 10.21.42.3
+      no_bgp:
+      addrs:
+        eth2: ["fc01::2/127", "10.21.42.2/31"]
+    c2:
+      #exec:
+      #  - ip route add default via 10.21.42.5
+      no_bgp:
+      addrs:
+        eth4: ["fc01::4/127", "10.21.42.4/31"]
+    s1:
+      lighttpd:
+      asn: "65003"
+      rid: "0.0.0.3"
+      import_lo:
+      addrs:
+        eth6: ["fc01::6/127", "10.21.42.6/31"]
+      neighbors:
+        r1:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth6'][1]}}')"
+          neighbor:
+            v4: "10.21.42.7"
+            asn: "65000"
+    s2:
+      lighttpd:
+      asn: "65004"
+      rid: "0.0.0.4"
+      import_lo:
+      addrs:
+        eth8: ["fc01::8/127", "10.21.42.8/31"]
+      neighbors:
+        r2:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth8'][1]}}')"
+          neighbor:
+            v4: "10.21.42.9"
+            asn: "65001"

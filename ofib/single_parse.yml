@@ -1,0 +1,19 @@
+- name: Check FIBs
+  delegate_to: 127.0.0.1
+  vars:
+    path: "{{base}}/{{run}}"
+  block:
+    - name: "[{{path}}] Check FIB before reconfiguration"
+      ansible.builtin.shell:
+        cmd: "netutils fib compare renater.ntf {{path}}/before/"
+
+    - name: "[{{path}}] Check FIB after reconfiguration"
+      ansible.builtin.shell:
+        cmd: "netutils fib compare renater_post.ntf {{path}}/after/"
+
+- name: "[{{path}}] Get µloop duration"
+  delegate_to: 127.0.0.1
+  vars:
+    path: "{{base}}/{{run}}"
+  ansible.builtin.shell:
+    cmd: "python udp_parser.py {{path}}/ping.log > {{path}}/ping.result"

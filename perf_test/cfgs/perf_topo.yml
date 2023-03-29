@@ -1,0 +1,159 @@
+
+infrastructure:
+  nodes:
+    # core 20, 21, 22, 23 are reserved for the kernel
+    glutenfree:
+      cores: [
+        [0, 1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10, 11],
+        [12, 13, 14, 15, 16, 17],
+        [18, 19],
+      ]
+
+topology:
+  defaults:
+    links:
+      latency: 15ms
+      metric: 1
+      mtu: 1500
+      bw: 1gbit
+
+    nodes:
+      # sysctls are applied on node creation
+      sysctls:
+        net.ipv6.conf.default.keep_addr_on_down: 1
+        net.ipv4.udp_rmem_min: 212992 # default value of net.core_rmem_default
+        net.ipv4.udp_wmem_min: 212992 # default value of net.core_wmem_default
+
+      # execs are applied once the topo has been built
+      exec:
+        - mkdir -p /dev/shm/test_perf/{{node}}
+
+      templates:
+        bird.quic.conf: /dev/shm/test_perf/{{node}}/{{node}}.bird.quic.conf
+        bird.tcp.conf: /dev/shm/test_perf/{{node}}/{{node}}.bird.tcp.conf
+        bird.tcp_ao.conf: /dev/shm/test_perf/{{node}}/{{node}}.bird.tcp_ao.conf
+        bird.tls.conf: /dev/shm/test_perf/{{node}}/{{node}}.bird.tls.conf
+        bird.tls_ao.conf: /dev/shm/test_perf/{{node}}/{{node}}.bird.tls_ao.conf
+
+      # processes are applied once the topo has been built
+      pinned:
+        - cmd: ./bird -s /dev/shm/test_perf/{{node}}/bird.sk -fc /dev/shm/test_perf/{{node}}.bird.conf -P /dev/shm/test_perf/{{node}}/bird.pid > /dev/shm/test_perf/{{node}}/{{bird}}.std 2>&1 &
+          environ:
+            IO_QUIC_CORE_ID: "{{core_1}}"
+          down: kill $(cat /dev/shm/test_perf/{{node}}/bird.pid)
+          pre_down:
+            - echo 'Killing node <{{node}}>'
+
+      asn: '%fun helpers.get_asn("{{node}}")'
+      rid: '%fun helpers.get_rid("{{node}}")'
+
+  links:
+    - endpoints: ["gobgp:eth0", "rtr_inject:eth1"]
+    - endpoints: ["rtr_inject:eth2", "rtr1:eth3"]
+    - endpoints: ["rtr1:eth4", "rtr2:eth5"]
+    - endpoints: ["rtr2:eth6", "rtr3:eth7"]
+
+  nodes:
+    gobgp:
+      asn: "65500"
+      rid: 1.1.1.1
+      port: "1179"
+      templates:
+        gobgp.conf: /dev/shm/test_perf/{{node}}.gobgp.conf
+      addrs:
+        eth0: ["172.16.0.0/31", "fc01::0/127"]
+      neighbors:
+        rtr_inject:
+          direction: downstream
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth0'][0]}}')"
+            port: "1179"
+          neighbor:
+            v4: 172.16.0.1
+            asn: "65000"
+            port: "1179"
+
+    rtr_inject:
+      asn: "65000"
+      rid: 1.1.1.42
+      addrs:
+        eth1: ["172.16.0.1/31", "fc01::1/127"]
+        eth2: ["172.16.0.2/31", "fc01::2/127"]
+      neighbors:
+        gobgp:
+          direction: upstream
+          vanilla_session:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth1'][0]}}')"
+            port: "1179"
+          neighbor:
+            v4: 172.16.0.0
+            asn: "65500"
+            port: "1179"
+        rtr1:
+          direction: downstream
+          vanilla_session:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth2'][0]}}')"
+          neighbor:
+            v4: 172.16.0.3
+            asn: "%fun helpers.get_asn('rtr1')"
+    rtr1:
+      addrs:
+        eth3: ["172.16.0.3/31", "fc01::3/127"]
+        eth4: ["172.16.0.4/31", "fc01::4/127"]
+      neighbors:
+        rtr_inject:
+          direction: upstream
+          vanilla_session:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth3'][0]}}')"
+          neighbor:
+            v4: 172.16.0.2
+            asn: "65000"
+        rtr2:
+          direction: downstream
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth4'][0]}}')"
+          neighbor:
+            v4: 172.16.0.5
+            asn: "%fun helpers.get_asn('rtr2')"
+          passwd: "%fun helpers.get_passwd('rtr2','rtr3')"
+      enable_mrt:
+    rtr2:
+      addrs:
+        eth5: ["172.16.0.5/31", "fc01::5/127"]
+        eth6: ["172.16.0.6/31", "fc01::6/127"]
+      neighbors:
+        rtr1:
+          direction: upstream
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth5'][0]}}')"
+          neighbor:
+            v4: 172.16.0.4
+            asn: "%fun helpers.get_asn('rtr1')"
+          passive:
+          passwd: "%fun helpers.get_passwd('rtr2','rtr3')"
+        rtr3:
+          direction: downstream
+          vanilla_session:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth6'][0]}}')"
+          neighbor:
+            v4: 172.16.0.7
+            asn: "%fun helpers.get_asn('rtr3')"
+      enable_mrt:
+    rtr3:
+      addrs:
+        eth7: ["172.16.0.7/31", "fc01::7/127"]
+      neighbors:
+        rtr2:
+          direction: upstream
+          vanilla_session:
+          local:
+            v4: "%fun helpers.get_addr('{{addrs['eth7'][0]}}')"
+          neighbor:
+            v4: 172.16.0.6
+            asn: "%fun helpers.get_asn('rtr2')"
+      enable_mrt:

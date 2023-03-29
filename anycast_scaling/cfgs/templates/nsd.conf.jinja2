@@ -1,0 +1,22 @@
+{% if lighttpd %}
+server:
+	server-count: 1
+	database: "{{work_dir}}/{{node}}/{{node}}.nsd.db"
+	logfile: "{{work_dir}}/{{node}}/{{node}}.nsd.log"
+	pidfile: "{{work_dir}}/{{node}}/{{node}}.nsd.pid"
+	username: ""
+	xfrdfile: "{{work_dir}}/{{node}}/{{node}}.xfrd.state"
+	hide-version: yes
+	identity: "{{node}} replica"
+	zonesdir: "{{work_dir}}/zones"
+  ip-address: 192.0.2.1
+  rrl-ratelimit: 0
+
+verify:
+
+remote-control:
+
+zone:
+	name: "test"
+	zonefile: "test.zone"
+{% endif %}

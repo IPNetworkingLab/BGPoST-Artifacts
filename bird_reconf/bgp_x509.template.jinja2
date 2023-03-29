@@ -1,0 +1,17 @@
+{{ fn_filters }}
+
+protocol bgp {{ name }} {
+	local {{ local_ip }} as {{ local_as }};
+	neighbor {{ remote_ip }} as {{ remote_as }};
+
+	transport quic;
+	certificate "{{ local_certificate }}";
+	root ca "{{ root_ca }}";
+	tls_insecure off;
+	key "{{ local_key }}";
+	alpn "bgp4";
+	remote sni "{{ remote_sni }}";
+	peer_require_auth on;
+
+	{{ af_routes_filtering }}
+}

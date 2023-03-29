@@ -1,0 +1,18 @@
+FROM debian:11
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential \
+          autoconf libtool autoconf-archive gnu-standards libtool \
+          gettext flex bison libssh-dev libncurses-dev libreadline-dev \
+          git cmake pkg-config
+
+# Compile picotls
+RUN git clone https://github.com/h2o/picotls.git /opt/picotls && \
+    cd /opt/picotls && \
+    git submodule init && \
+    git submodule update && \
+    mkdir build && \
+    cd build && \
+    cmake -DCMAKE_BUILD_TYPE=Release .. && \
+    make -j$(nproc)

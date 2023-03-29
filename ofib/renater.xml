@@ -1,0 +1,203 @@
+<rspec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.geni.net/resources/rspec/3" xmlns:client="http://www.protogeni.net/resources/rspec/ext/client/1" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xsi:schemaLocation="http://www.geni.net/resources/rspec/3 http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <rspec_tour xmlns="http://www.protogeni.net/resources/rspec/ext/apt-tour/1">
+    <description type="markdown">
+
+</description>
+  </rspec_tour>
+  <node client_id="phynode000" exclusive="true">
+    <sliver_type name="raw"/>
+    <hardware_type name="d710"/>
+    <interface client_id="phynode000:if0"/>
+    <interface client_id="phynode000:if1"/>
+    <interface client_id="phynode000:if2"/>
+    <interface client_id="phynode000:if3"/>
+    <interface client_id="phynode000:if4"/>
+    <interface client_id="phynode000:if5"/>
+    <interface client_id="phynode000:if6"/>
+    <interface client_id="phynode000:if7"/>
+    <interface client_id="phynode000:if8"/>
+    <interface client_id="phynode000:if9"/>
+    <interface client_id="phynode000:if10"/>
+    <interface client_id="phynode000:if11"/>
+    <interface client_id="phynode000:if12"/>
+    <services>
+      <install url="https://roq.info.ucl.ac.be:8080/e8b32bc4d7b564ac6075a1418ad8841e/cfg/579021709b636e877d429e38b593b2a421994116fa1fb246ee0f3112b530a9e3.tar.gz" install_path="${ROOT}"/>
+      <execute shell="bash" command="sudo chmod +x ${ROOT}/phynode000.sh"/>
+      <execute shell="bash" command="sudo ${ROOT}/phynode000.sh | sudo tee -a /root/install.log"/>
+    </services>
+  </node>
+  <node client_id="phynode001" exclusive="true">
+    <sliver_type name="raw"/>
+    <hardware_type name="d710"/>
+    <interface client_id="phynode001:if0"/>
+    <interface client_id="phynode001:if1"/>
+    <interface client_id="phynode001:if2"/>
+    <interface client_id="phynode001:if3"/>
+    <interface client_id="phynode001:if4"/>
+    <interface client_id="phynode001:if5"/>
+    <interface client_id="phynode001:if6"/>
+    <interface client_id="phynode001:if7"/>
+    <interface client_id="phynode001:if8"/>
+    <interface client_id="phynode001:if9"/>
+    <interface client_id="phynode001:if10"/>
+    <services>
+      <install url="https://roq.info.ucl.ac.be:8080/e8b32bc4d7b564ac6075a1418ad8841e/cfg/579021709b636e877d429e38b593b2a421994116fa1fb246ee0f3112b530a9e3.tar.gz" install_path="${ROOT}"/>
+      <execute shell="bash" command="sudo chmod +x ${ROOT}/phynode001.sh"/>
+      <execute shell="bash" command="sudo ${ROOT}/phynode001.sh | sudo tee -a /root/install.log"/>
+    </services>
+  </node>
+  <node client_id="phynode002" exclusive="true">
+    <sliver_type name="raw"/>
+    <hardware_type name="d710"/>
+    <interface client_id="phynode002:if0"/>
+    <interface client_id="phynode002:if1"/>
+    <interface client_id="phynode002:if2"/>
+    <interface client_id="phynode002:if3"/>
+    <interface client_id="phynode002:if4"/>
+    <interface client_id="phynode002:if5"/>
+    <services>
+      <install url="https://roq.info.ucl.ac.be:8080/e8b32bc4d7b564ac6075a1418ad8841e/cfg/579021709b636e877d429e38b593b2a421994116fa1fb246ee0f3112b530a9e3.tar.gz" install_path="${ROOT}"/>
+      <execute shell="bash" command="sudo chmod +x ${ROOT}/phynode002.sh"/>
+      <execute shell="bash" command="sudo ${ROOT}/phynode002.sh | sudo tee -a /root/install.log"/>
+    </services>
+  </node>
+  <node client_id="phynode003" exclusive="true">
+    <sliver_type name="raw"/>
+    <hardware_type name="d710"/>
+    <interface client_id="phynode003:if0"/>
+    <interface client_id="phynode003:if1"/>
+    <interface client_id="phynode003:if2"/>
+    <interface client_id="phynode003:if3"/>
+    <interface client_id="phynode003:if4"/>
+    <interface client_id="phynode003:if5"/>
+    <interface client_id="phynode003:if6"/>
+    <interface client_id="phynode003:if7"/>
+    <interface client_id="phynode003:if8"/>
+    <interface client_id="phynode003:if9"/>
+    <services>
+      <install url="https://roq.info.ucl.ac.be:8080/e8b32bc4d7b564ac6075a1418ad8841e/cfg/579021709b636e877d429e38b593b2a421994116fa1fb246ee0f3112b530a9e3.tar.gz" install_path="${ROOT}"/>
+      <execute shell="bash" command="sudo chmod +x ${ROOT}/phynode003.sh"/>
+      <execute shell="bash" command="sudo ${ROOT}/phynode003.sh | sudo tee -a /root/install.log"/>
+    </services>
+  </node>
+  <link client_id="node001_node025_1">
+    <interface_ref client_id="phynode000:if0"/>
+    <interface_ref client_id="phynode002:if0"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node001_node024_1">
+    <interface_ref client_id="phynode000:if1"/>
+    <interface_ref client_id="phynode002:if1"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node001_node027_1">
+    <interface_ref client_id="phynode000:if2"/>
+    <interface_ref client_id="phynode003:if0"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node002_node009_1">
+    <interface_ref client_id="phynode000:if3"/>
+    <interface_ref client_id="phynode001:if0"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node003_node009_1">
+    <interface_ref client_id="phynode000:if4"/>
+    <interface_ref client_id="phynode001:if1"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node003_node010_1">
+    <interface_ref client_id="phynode000:if5"/>
+    <interface_ref client_id="phynode001:if2"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node004_node013_1">
+    <interface_ref client_id="phynode000:if6"/>
+    <interface_ref client_id="phynode001:if3"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node007_node010_1">
+    <interface_ref client_id="phynode000:if7"/>
+    <interface_ref client_id="phynode001:if4"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node007_node030_1">
+    <interface_ref client_id="phynode000:if8"/>
+    <interface_ref client_id="phynode003:if1"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node007_node031_1">
+    <interface_ref client_id="phynode000:if9"/>
+    <interface_ref client_id="phynode003:if2"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node007_node032_1">
+    <interface_ref client_id="phynode000:if10"/>
+    <interface_ref client_id="phynode003:if3"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node007_node033_1">
+    <interface_ref client_id="phynode000:if11"/>
+    <interface_ref client_id="phynode003:if4"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node008_node023_1">
+    <interface_ref client_id="phynode000:if12"/>
+    <interface_ref client_id="phynode002:if2"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node010_node018_1">
+    <interface_ref client_id="phynode001:if5"/>
+    <interface_ref client_id="phynode002:if3"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node014_node028_1">
+    <interface_ref client_id="phynode001:if6"/>
+    <interface_ref client_id="phynode003:if5"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node014_node029_1">
+    <interface_ref client_id="phynode001:if7"/>
+    <interface_ref client_id="phynode003:if6"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node015_node034_1">
+    <interface_ref client_id="phynode001:if8"/>
+    <interface_ref client_id="phynode003:if7"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node016_node018_1">
+    <interface_ref client_id="phynode001:if9"/>
+    <interface_ref client_id="phynode002:if4"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node017_node029_1">
+    <interface_ref client_id="phynode001:if10"/>
+    <interface_ref client_id="phynode003:if8"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+  <link client_id="node020_node027_1">
+    <interface_ref client_id="phynode002:if5"/>
+    <interface_ref client_id="phynode003:if9"/>
+    <emulab:best_effort enabled="true"/>
+    <emulab:link_multiplexing enabled="true"/>
+  </link>
+</rspec>

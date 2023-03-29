@@ -1,0 +1,17 @@
+- name: "Find ping logs on {{host}}"
+  register: ping_logs
+  when: inventory_hostname == "{{host}}"
+  ansible.builtin.find:
+    paths: "/tmp"
+    patterns: "ping_*.log"
+
+- name: "Collect {{host}} ping logs"
+  when: inventory_hostname == "{{host}}"
+  with_items: "{{ping_logs.files}}"
+  loop_control:
+    loop_var: inner_item
+  ansible.builtin.fetch:
+    src: "{{inner_item.path}}"
+    dest: "{{ base }}/{{ run }}/"
+    flat: yes
+

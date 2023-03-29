@@ -1,0 +1,1 @@
+../cert-generator/generate_certs.sh

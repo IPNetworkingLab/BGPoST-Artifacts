@@ -1,0 +1,14 @@
+[project]
+name = "netutils"
+version = "0.0.0"
+dependencies = [
+    "pyroute2",
+    "networkx",
+    "matplotlib"
+]
+
+[project.scripts]
+netutils = "netutils:main"
+
+#[tool.setuptools.packages.find]
+#where = ["netutils"]

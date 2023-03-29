@@ -1,0 +1,2 @@
+s2.bird.conf: /dev/shm/anycast_topo/s2/s2.bird.conf
+s2.nsd.conf: /dev/shm/anycast_topo/s2/s2.nsd.conf

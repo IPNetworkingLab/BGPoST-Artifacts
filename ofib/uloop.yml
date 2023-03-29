@@ -1,0 +1,213 @@
+#- name: uLoop measures
+#  hosts: compute
+#  vars:
+#    base: "/tmp"
+#  tasks:
+
+- name: Create local run directory
+  run_once: true
+  delegate_to: 127.0.0.1
+  ansible.builtin.file:
+    path: "{{ base }}/{{ run }}"
+    state: "directory"
+
+- name: Configure OSPF version
+  block:
+
+    - name: Find nodes cfg
+      register: nodes_cfg
+      ansible.builtin.find:
+        paths: "."
+        patterns: "node*.cfg"
+   
+    - name: Removing tls keyword from OSPF cfg
+      when: ospf_version == "bird_classic"
+      with_items: "{{ nodes_cfg.files }}"
+      loop_control:
+        loop_var: inner_item
+      ansible.builtin.replace:
+        regexp: '(\s+)tls'
+        replace: '\1#tls'
+        path: "{{inner_item.path}}"
+
+    - name: Removing alpn keyword from OSPF cfg
+      when: ospf_version == "bird_classic"
+      with_items: "{{ nodes_cfg.files }}"
+      loop_control:
+        loop_var: inner_item
+      ansible.builtin.replace:
+        regexp: '(\s+)alpn'
+        replace: '\1#alpn'
+        path: "{{inner_item.path}}"
+
+    - name: Reset tls keyword from OSPF cfg
+      when: ospf_version == "bird_ofib"
+      with_items: "{{ nodes_cfg.files }}"
+      loop_control:
+        loop_var: inner_item
+      ansible.builtin.replace:
+        regexp: '(\s+)#tls'
+        replace: '\1tls'
+        path: "{{inner_item.path}}"
+
+    - name: Reset alpn keyword from OSPF cfg
+      when: ospf_version == "bird_ofib"
+      with_items: "{{ nodes_cfg.files }}"
+      loop_control:
+        loop_var: inner_item
+      ansible.builtin.replace:
+        regexp: '(\s+)#alpn'
+        replace: '\1alpn'
+        path: "{{inner_item.path}}"
+
+    - name: Select OSPF version
+      ansible.builtin.shell:
+        cmd: "rm bird && ln -s {{ospf_version}} bird"
+
+- name: Launch BIRD
+  block:
+    - name: Launch BIRD
+      ansible.builtin.shell:
+        cmd: "./launch.sh"
+
+    - name: Ensure all nodes are up
+      ansible.builtin.shell:
+        cmd: "if [[ $(pgrep bird | wc -l) != {{n_nodes}} ]]; then fail; fi"
+
+- name: Wait initial convergence
+  delegate_to: 127.0.0.1
+  run_once: true
+  ansible.builtin.wait_for:
+    timeout: 35
+
+- name: Fetch FIBs
+  vars:
+    path: "before"
+  ansible.builtin.include_tasks:
+    file: dump_fibs.yml
+
+- name: Launch ping server
+  block:
+
+    - name: node001 server
+      when: inventory_hostname == "pita"
+      ansible.builtin.shell:
+        cmd: "taskset -c 22 ip netns exec node001 nohup ./udp-ping --ip fc00:1:1:: -p 8080 > /tmp/ping_001.log &"
+
+    - name: node004 server
+      when: inventory_hostname == "pita"
+      ansible.builtin.shell:
+        cmd: "taskset -c 22 ip netns exec node004 nohup ./udp-ping --ip fc00:1:4:: -p 8080 > /tmp/ping_004.log &"
+
+    - name: node035 server
+      when: inventory_hostname == "melonpan"
+      ansible.builtin.shell:
+        cmd: "taskset -c 19 ip netns exec node035 nohup ./udp-ping --ip fc00:1:23:: -p 8080 > /tmp/ping_035.log &"
+
+- name: Launch ping clients
+  block:
+
+    - name: node000 client
+      when: inventory_hostname == "pita"
+      ansible.builtin.shell:
+        cmd: "taskset -c 21 ip netns exec node000 nohup ./udp-ping --ip fc00:1:: -p 8081 -r fc00:1:23:: --cli-type=client --interval 1 &"
+
+    - name: node000 client
+      when: inventory_hostname == "pita"
+      ansible.builtin.shell:
+        cmd: "taskset -c 21 ip netns exec node000 nohup ./udp-ping --ip fc00:1:: -p 8082 -r fc00:1:1:: --cli-type=client --interval 1 &"
+
+    - name: node001 client
+      when: inventory_hostname == "pita"
+      ansible.builtin.shell:
+        cmd: "taskset -c 21 ip netns exec node001 nohup ./udp-ping --ip fc00:1:1:: -p 8082 -r fc00:1:4:: --cli-type=client --interval 1 &"
+
+    - name: node003 client
+      when: inventory_hostname == "pita"
+      ansible.builtin.shell:
+        cmd: "taskset -c 21 ip netns exec node003 nohup ./udp-ping --ip fc00:1:3:: -p 8083 -r fc00:1:1:: --cli-type=client --interval 1 &"
+
+    - name: node004 client
+      when: inventory_hostname == "pita"
+      ansible.builtin.shell:
+        cmd: "taskset -c 21 ip netns exec node004 nohup ./udp-ping --ip fc00:1:4:: -p 8084 -r fc00:1:23:: --cli-type=client --interval 1 &"
+
+    - name: node013 client
+      when: inventory_hostname == "baguette"
+      ansible.builtin.shell:
+        cmd: "taskset -c 21 ip netns exec node013 nohup ./udp-ping --ip fc00:1:d:: -p 8085 -r fc00:1:1:: --cli-type=client --interval 1 &"
+
+    - name: node027 client
+      when: inventory_hostname == "melonpan"
+      ansible.builtin.shell:
+        cmd: "taskset -c 17 ip netns exec node027 nohup ./udp-ping --ip fc00:1:1b:: -p 8086 -r fc00:1:4:: --cli-type=client --interval 1 &"
+
+- name: Get some normal pings
+  delegate_to: 127.0.0.1
+  run_once: true
+  ansible.builtin.wait_for:
+    timeout: 2
+
+- name: Launch link reconfiguration
+  when: inventory_hostname == "pita"
+  block:
+    - name: "node00{0,1} reconfiguration"
+      ansible.builtin.shell:
+        cmd: |
+          ./birdc -s /tmp/node001.bird.sk "configure \"node001post.bird.cfg\"" &
+          ./birdc -s /tmp/node000.bird.sk "configure \"node000post.bird.cfg\"" &
+
+- name: Wait convergence after reconfiguration
+  delegate_to: 127.0.0.1
+  run_once: true
+  ansible.builtin.wait_for:
+    timeout: 15
+
+- name: Stop ping processes
+  when: inventory_hostname in ['pita', 'baguette', 'melonpan']
+  ansible.builtin.shell:
+    cmd: "pkill udp-ping"
+
+- name: Collect ping logs
+  loop:
+    - pita
+    - melonpan
+  loop_control:
+    loop_var: host
+  ansible.builtin.include_tasks:
+    file: collect_logs.yml
+
+- name: Fetch FIBs
+  vars:
+    path: "after"
+  ansible.builtin.include_tasks:
+    file: dump_fibs.yml
+
+- name: Collect nodes logs
+  block:
+    - name: Find nodes logs
+      register: nodes_log
+      ansible.builtin.find:
+        paths: "/tmp"
+        patterns: "node*.log"
+
+    - name: Fetch nodes logs
+      with_items: "{{ nodes_log.files }}"
+      loop_control:
+        loop_var: inner_item
+      ansible.builtin.fetch:
+        src: "{{ inner_item.path }}"
+        dest: "/dev/shm/logs"
+        validate_checksum: false
+
+    - name: Move nodes logs
+      delegate_to: 127.0.0.1
+      run_once: true
+      ansible.builtin.shell:
+        cmd: "mv /dev/shm/logs/*/tmp/* /dev/shm/logs && find /dev/shm/logs -depth -empty -delete && mv /dev/shm/logs {{ base }}/{{ run }}/logs"
+
+- name: Cleanup
+  when: true
+  check_mode: false
+  ansible.builtin.shell:
+    cmd: "pkill bird; rm -rf /tmp/*.log; rm -rf /tmp/dumps"

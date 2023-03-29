@@ -1,0 +1,1756 @@
+2023-04-17 15:05:24.061 <TRACE> device1: Initializing
+2023-04-17 15:05:24.061 <TRACE> direct1.ipv4: Connected to table master4
+2023-04-17 15:05:24.061 <TRACE> direct1.ipv6: Connected to table master6
+2023-04-17 15:05:24.061 <TRACE> direct1: Initializing [disabled]
+2023-04-17 15:05:24.061 <TRACE> kernel1.ipv4: Connected to table master4
+2023-04-17 15:05:24.061 <TRACE> kernel1: Initializing
+2023-04-17 15:05:24.061 <TRACE> kernel2.ipv6: Connected to table master6
+2023-04-17 15:05:24.061 <TRACE> kernel2: Initializing
+2023-04-17 15:05:24.061 <TRACE> ospf1.ipv6: Connected to table master6
+2023-04-17 15:05:24.061 <TRACE> ospf1: Initializing
+2023-04-17 15:05:24.061 <TRACE> device1: Starting
+2023-04-17 15:05:24.061 <TRACE> device1: Scanning interfaces
+2023-04-17 15:05:24.061 <TRACE> device1: State changed to up
+2023-04-17 15:05:24.061 <TRACE> kernel1: Starting
+2023-04-17 15:05:24.061 <TRACE> kernel1.ipv4: State changed to UP/FEEDING
+2023-04-17 15:05:24.061 <TRACE> kernel1: State changed to up
+2023-04-17 15:05:24.061 <TRACE> kernel2: Starting
+2023-04-17 15:05:24.061 <TRACE> kernel2.ipv6: State changed to UP/FEEDING
+2023-04-17 15:05:24.061 <TRACE> kernel2: State changed to up
+2023-04-17 15:05:24.061 <TRACE> ospf1: Starting
+2023-04-17 15:05:24.061 <TRACE> ospf1: Adding area 0.0.0.0
+2023-04-17 15:05:24.061 <TRACE> ospf1.ipv6: State changed to UP/FEEDING
+2023-04-17 15:05:24.061 <TRACE> ospf1: State changed to up
+2023-04-17 15:05:24.061 <INFO> Started
+2023-04-17 15:05:24.067 <TRACE> kernel1 < interface lo goes up
+2023-04-17 15:05:24.067 <TRACE> kernel1 < interface veth031001 goes up
+2023-04-17 15:05:24.067 <TRACE> kernel1 < interface veth031000 goes up
+2023-04-17 15:05:24.067 <TRACE> kernel2 < interface lo goes up
+2023-04-17 15:05:24.067 <TRACE> kernel2 < interface veth031001 goes up
+2023-04-17 15:05:24.067 <TRACE> kernel2 < interface veth031000 goes up
+2023-04-17 15:05:24.067 <TRACE> ospf1 < interface lo goes up
+2023-04-17 15:05:24.067 <TRACE> ospf1 < address 127.0.0.0/8 on interface lo added
+2023-04-17 15:05:24.067 <TRACE> ospf1 < address fc00:1:1f::/128 on interface lo added
+2023-04-17 15:05:24.067 <TRACE> ospf1 < address ::1/128 on interface lo added
+2023-04-17 15:05:24.067 <TRACE> ospf1 < address fe80::/64 on interface lo added
+2023-04-17 15:05:24.067 <TRACE> ospf1: Adding interface lo (IID 0) to area 0.0.0.0
+2023-04-17 15:05:24.067 <TRACE> ospf1 < interface veth031001 goes up
+2023-04-17 15:05:24.067 <TRACE> ospf1 < address fe80::/64 on interface veth031001 added
+2023-04-17 15:05:24.067 <TRACE> ospf1: Adding interface veth031001 (IID 0) to area 0.0.0.0
+2023-04-17 15:05:24.067 <TRACE> ospf1 < interface veth031000 goes up
+2023-04-17 15:05:24.067 <TRACE> ospf1 < address fe80::/64 on interface veth031000 added
+2023-04-17 15:05:24.067 <TRACE> ospf1: Adding interface veth031000 (IID 0) to area 0.0.0.0
+2023-04-17 15:05:24.067 <TRACE> kernel1.ipv4: State changed to UP/READY
+2023-04-17 15:05:24.067 <TRACE> kernel2.ipv6: State changed to UP/READY
+2023-04-17 15:05:24.067 <TRACE> ospf1.ipv6: State changed to UP/READY
+2023-04-17 15:05:24.067 <TRACE> kernel2: Scanning routing table
+2023-04-17 15:05:24.067 <TRACE> kernel2: Pruning table master6
+2023-04-17 15:05:24.067 <TRACE> kernel2: Pruning inherited routes
+2023-04-17 15:05:24.067 <TRACE> kernel1: Scanning routing table
+2023-04-17 15:05:24.067 <TRACE> kernel1: Pruning table master4
+2023-04-17 15:05:24.067 <TRACE> kernel1: Pruning inherited routes
+2023-04-17 15:05:24.067 <TRACE> ospf1: Interface veth031000 changed state from Down to PtP
+2023-04-17 15:05:24.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:24.067 <TRACE> ospf1: Interface veth031001 changed state from Down to PtP
+2023-04-17 15:05:24.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:24.067 <TRACE> ospf1: Interface lo changed state from Down to Waiting
+2023-04-17 15:05:24.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:24.077 <TRACE> ospf1: New neighbor 0.0.0.33 on veth031001, IP address fe80::9485:ffff:fe22:3fb3
+2023-04-17 15:05:24.077 <TRACE> ospf1: Neighbor 0.0.0.33 on veth031001 changed state from Down to Init
+2023-04-17 15:05:24.162 <TRACE> ospf1: Updating router state for area 0.0.0.0
+2023-04-17 15:05:24.162 <TRACE> ospf1: Originating LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001
+2023-04-17 15:05:24.162 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:24.162 <TRACE> ospf1: Originating LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001
+2023-04-17 15:05:24.162 <TRACE> ospf1: Updating link state for lo (Id: 0.0.0.1)
+2023-04-17 15:05:24.162 <TRACE> ospf1: Originating LSA: Type: 0008, Id: 0.0.0.1, Rt: 0.0.0.32, Seq: 80000001
+2023-04-17 15:05:24.162 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:24.162 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:24.162 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:24.162 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:24.162 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:24.162 <TRACE> ospf1.ipv6 > added [best] fc00:1:1f::/128 0L 4G unicast
+2023-04-17 15:05:24.162 <TRACE> kernel2.ipv6 < added fc00:1:1f::/128 0L 4G unicast
+2023-04-17 15:05:24.162 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1f::/128 0L 4G unicast
+2023-04-17 15:05:28.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.922 <TRACE> ospf1: New neighbor 0.0.0.8 on veth031000, IP address fe80::f86a:14ff:fed4:5bd3
+2023-04-17 15:05:28.922 <TRACE> ospf1: Neighbor 0.0.0.8 on veth031000 changed state from Down to Init
+2023-04-17 15:05:28.922 <TRACE> ospf1: Neighbor 0.0.0.8 on veth031000 changed state from Init to 2-Way
+2023-04-17 15:05:28.922 <TRACE> ospf1: Neighbor 0.0.0.8 on veth031000 changed state from 2-Way to ExStart
+2023-04-17 15:05:28.922 <TRACE> ospf1: DBDES packet sent to nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.922 <TRACE> ospf1:     length   28
+2023-04-17 15:05:28.922 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:28.922 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:28.922 <TRACE> ospf1:     imms     I M MS
+2023-04-17 15:05:28.922 <TRACE> ospf1:     ddseq    2228969197
+2023-04-17 15:05:28.943 <TRACE> ospf1: DBDES packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.943 <TRACE> ospf1:     length   68
+2023-04-17 15:05:28.943 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.943 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:28.943 <TRACE> ospf1:     imms     
+2023-04-17 15:05:28.943 <TRACE> ospf1:     ddseq    2228969197
+2023-04-17 15:05:28.943 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 4, Sum: 091e
+2023-04-17 15:05:28.943 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 4, Sum: 9bcb
+2023-04-17 15:05:28.943 <TRACE> ospf1: Neighbor 0.0.0.8 on veth031000 changed state from ExStart to Exchange
+2023-04-17 15:05:28.943 <TRACE> ospf1: DBDES packet sent to nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.943 <TRACE> ospf1:     length   68
+2023-04-17 15:05:28.943 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:28.943 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:28.943 <TRACE> ospf1:     imms     MS
+2023-04-17 15:05:28.943 <TRACE> ospf1:     ddseq    2228969198
+2023-04-17 15:05:28.943 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 4, Sum: 7896
+2023-04-17 15:05:28.943 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 4, Sum: 9e80
+2023-04-17 15:05:28.943 <TRACE> ospf1: LSREQ packet sent to nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.943 <TRACE> ospf1:     length   40
+2023-04-17 15:05:28.943 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:28.943 <TRACE> ospf1:     LSR      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8
+2023-04-17 15:05:28.943 <TRACE> ospf1:     LSR      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.8
+2023-04-17 15:05:28.964 <TRACE> ospf1: DBDES packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.964 <TRACE> ospf1:     length   28
+2023-04-17 15:05:28.964 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.964 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:28.964 <TRACE> ospf1:     imms     
+2023-04-17 15:05:28.964 <TRACE> ospf1:     ddseq    2228969198
+2023-04-17 15:05:28.964 <TRACE> ospf1: Neighbor 0.0.0.8 on veth031000 changed state from Exchange to Loading
+2023-04-17 15:05:28.964 <TRACE> ospf1: LSREQ packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.964 <TRACE> ospf1:     length   40
+2023-04-17 15:05:28.964 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.964 <TRACE> ospf1:     LSR      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32
+2023-04-17 15:05:28.964 <TRACE> ospf1:     LSR      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.32
+2023-04-17 15:05:28.964 <TRACE> ospf1: LSUPD packet sent to nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.964 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.964 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:28.964 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 5, Sum: 7896
+2023-04-17 15:05:28.964 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 5, Sum: 9e80
+2023-04-17 15:05:28.964 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.964 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.964 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.964 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 091e
+2023-04-17 15:05:28.964 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 9bcb
+2023-04-17 15:05:28.964 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5
+2023-04-17 15:05:28.964 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:28.964 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5
+2023-04-17 15:05:28.964 <TRACE> ospf1: Neighbor 0.0.0.8 on veth031000 changed state from Loading to Full
+2023-04-17 15:05:28.969 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.969 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.969 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.969 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: 2705
+2023-04-17 15:05:28.969 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: fa7b
+2023-04-17 15:05:28.969 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7
+2023-04-17 15:05:28.969 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7
+2023-04-17 15:05:28.971 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.971 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.971 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.971 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 0f19
+2023-04-17 15:05:28.971 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 7bee
+2023-04-17 15:05:28.971 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.971 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.972 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:28.972 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:28.972 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:28.972 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:28.972 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:28.974 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.974 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.974 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.974 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 210a
+2023-04-17 15:05:28.974 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 1b58
+2023-04-17 15:05:28.974 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7
+2023-04-17 15:05:28.974 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:28.974 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7
+2023-04-17 15:05:28.975 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.975 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.975 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.975 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: 33fa
+2023-04-17 15:05:28.975 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: bac1
+2023-04-17 15:05:28.975 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8
+2023-04-17 15:05:28.975 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8
+2023-04-17 15:05:28.982 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:28.982 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:28.982 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:28.982 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:28.982 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:28.984 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.984 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.984 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.984 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: 6ca0
+2023-04-17 15:05:28.984 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: de3a
+2023-04-17 15:05:28.984 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.984 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:28.984 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.985 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.985 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.985 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.985 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6, Sum: 729b
+2023-04-17 15:05:28.985 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6, Sum: be5d
+2023-04-17 15:05:28.985 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.985 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.985 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.985 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.985 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.985 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7e91
+2023-04-17 15:05:28.985 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7ea3
+2023-04-17 15:05:28.985 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.985 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.986 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.986 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.986 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.986 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: f62d
+2023-04-17 15:05:28.986 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: fb62
+2023-04-17 15:05:28.986 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.986 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6
+2023-04-17 15:05:28.991 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.991 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.991 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.991 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: 0323
+2023-04-17 15:05:28.991 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: bba8
+2023-04-17 15:05:28.991 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7
+2023-04-17 15:05:28.991 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7
+2023-04-17 15:05:28.992 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.992 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.992 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.992 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: fc28
+2023-04-17 15:05:28.992 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: db85
+2023-04-17 15:05:28.992 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8
+2023-04-17 15:05:28.992 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8
+2023-04-17 15:05:28.992 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:28.992 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:28.992 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:28.992 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:28.992 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:28.994 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.994 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.994 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.994 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 1514
+2023-04-17 15:05:28.994 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 5b12
+2023-04-17 15:05:28.994 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9
+2023-04-17 15:05:28.994 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:28.994 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9
+2023-04-17 15:05:28.995 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.995 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.995 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.995 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 1b0f
+2023-04-17 15:05:28.995 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 3b35
+2023-04-17 15:05:28.995 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9
+2023-04-17 15:05:28.995 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9
+2023-04-17 15:05:28.995 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:28.995 <TRACE> ospf1:     length   96
+2023-04-17 15:05:28.995 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:28.995 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: 2dff
+2023-04-17 15:05:28.995 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: da9e
+2023-04-17 15:05:28.995 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9
+2023-04-17 15:05:28.995 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9
+2023-04-17 15:05:29.002 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.002 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.002 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.002 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.002 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.007 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.007 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.007 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.007 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: a86e
+2023-04-17 15:05:29.007 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: 9d99
+2023-04-17 15:05:29.007 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.007 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.007 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.008 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.008 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.008 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.008 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 9082
+2023-04-17 15:05:29.008 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 1e0d
+2023-04-17 15:05:29.008 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.008 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.008 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.008 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.008 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.008 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: a273
+2023-04-17 15:05:29.008 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: bd76
+2023-04-17 15:05:29.008 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.008 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.008 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.008 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.008 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.008 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: 9c78
+2023-04-17 15:05:29.008 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: dd53
+2023-04-17 15:05:29.008 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.008 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.012 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.012 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.012 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.012 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.012 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.018 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.018 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.018 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.018 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: e43c
+2023-04-17 15:05:29.018 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: 5cf8
+2023-04-17 15:05:29.018 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.018 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.018 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.022 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.022 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.022 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.022 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.022 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.023 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.023 <TRACE> ospf1:     length   216
+2023-04-17 15:05:29.023 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.023 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000002, Age: 1, Sum: 153a
+2023-04-17 15:05:29.023 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: de41
+2023-04-17 15:05:29.023 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: 7cd5
+2023-04-17 15:05:29.023 <TRACE> ospf1: Skipping LSA received in less that MinLSArrival
+2023-04-17 15:05:29.023 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.023 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.023 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.023 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.023 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.023 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.023 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: f032
+2023-04-17 15:05:29.023 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: 1c3f
+2023-04-17 15:05:29.023 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.023 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.023 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.023 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.023 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.023 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: d24b
+2023-04-17 15:05:29.023 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: bc8f
+2023-04-17 15:05:29.023 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.023 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.024 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.024 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.024 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.024 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: c655
+2023-04-17 15:05:29.024 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: fc49
+2023-04-17 15:05:29.024 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.024 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.032 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.032 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.032 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.032 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.032 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.036 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.036 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.036 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.036 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: ea37
+2023-04-17 15:05:29.036 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: 3c1c
+2023-04-17 15:05:29.036 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.036 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.036 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.042 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.042 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.042 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.042 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.042 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.045 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.045 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.045 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.045 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: cc50
+2023-04-17 15:05:29.045 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: dc6c
+2023-04-17 15:05:29.045 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.045 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.045 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.046 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.046 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.046 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.046 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 848c
+2023-04-17 15:05:29.046 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 5ec6
+2023-04-17 15:05:29.046 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.046 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.047 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.047 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.047 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.047 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 8a87
+2023-04-17 15:05:29.047 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 3ee9
+2023-04-17 15:05:29.047 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.047 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8
+2023-04-17 15:05:29.050 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.050 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.050 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.050 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: d846
+2023-04-17 15:05:29.050 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: 9cb2
+2023-04-17 15:05:29.050 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9
+2023-04-17 15:05:29.050 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9
+2023-04-17 15:05:29.052 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.052 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.052 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.052 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.052 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:29.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:29.070 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.070 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.070 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.070 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: 66a5
+2023-04-17 15:05:29.070 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: fe17
+2023-04-17 15:05:29.070 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.070 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.070 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10
+2023-04-17 15:05:29.072 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.072 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.072 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.072 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.072 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.077 <TRACE> ospf1: Neighbor 0.0.0.33 on veth031001 changed state from Init to 2-Way
+2023-04-17 15:05:29.077 <TRACE> ospf1: Neighbor 0.0.0.33 on veth031001 changed state from 2-Way to ExStart
+2023-04-17 15:05:29.078 <TRACE> ospf1: DBDES packet sent to nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.078 <TRACE> ospf1:     length   28
+2023-04-17 15:05:29.078 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.078 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:29.078 <TRACE> ospf1:     imms     I M MS
+2023-04-17 15:05:29.078 <TRACE> ospf1:     ddseq    3232608533
+2023-04-17 15:05:29.088 <TRACE> ospf1: DBDES packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.088 <TRACE> ospf1:     length   28
+2023-04-17 15:05:29.088 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.088 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:29.088 <TRACE> ospf1:     imms     I M MS
+2023-04-17 15:05:29.088 <TRACE> ospf1:     ddseq    2055136704
+2023-04-17 15:05:29.088 <TRACE> ospf1: Neighbor 0.0.0.33 on veth031001 changed state from ExStart to Exchange
+2023-04-17 15:05:29.088 <TRACE> ospf1: DBDES packet sent to nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.088 <TRACE> ospf1:     length   1228
+2023-04-17 15:05:29.088 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.088 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:29.088 <TRACE> ospf1:     imms     
+2023-04-17 15:05:29.088 <TRACE> ospf1:     ddseq    2055136704
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 4, Sum: 7896
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 4, Sum: 9e80
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 091e
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 9bcb
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: 2705
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: fa7b
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 0f19
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 7bee
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 210a
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 1b58
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: 33fa
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: bac1
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: 6ca0
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: de3a
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6, Sum: 729b
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6, Sum: be5d
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7e91
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7ea3
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: f62d
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: fb62
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: 0323
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: bba8
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: fc28
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: db85
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 1514
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 5b12
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 1b0f
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 3b35
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: 2dff
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: da9e
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: a86e
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: 9d99
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 9082
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 1e0d
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: a273
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: bd76
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: 9c78
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: dd53
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: e43c
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: 5cf8
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: de41
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: 7cd5
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: f032
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: 1c3f
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: d24b
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: bc8f
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: c655
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: fc49
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: ea37
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: 3c1c
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: cc50
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: dc6c
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 848c
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 5ec6
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 8a87
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 3ee9
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: d846
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: 9cb2
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: 66a5
+2023-04-17 15:05:29.088 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: fe17
+2023-04-17 15:05:29.109 <TRACE> ospf1: DBDES packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.109 <TRACE> ospf1:     length   1228
+2023-04-17 15:05:29.109 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.109 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:29.109 <TRACE> ospf1:     imms     MS
+2023-04-17 15:05:29.109 <TRACE> ospf1:     ddseq    2055136705
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 4, Sum: 729b
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 4, Sum: be5d
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 091e
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 9bcb
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: 2705
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: fa7b
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 0f19
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 7bee
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 210a
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 1b58
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: 33fa
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: bac1
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: 6ca0
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: de3a
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 6, Sum: 7896
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 6, Sum: 9e80
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7e91
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7ea3
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: f62d
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: fb62
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: 0323
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: bba8
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: fc28
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: db85
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 1514
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 5b12
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 1b0f
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 3b35
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: 2dff
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: da9e
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: a86e
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: 9d99
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 9082
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 1e0d
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: a273
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: bd76
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: 9c78
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: dd53
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: e43c
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: 5cf8
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: de41
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: 7cd5
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: f032
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: 1c3f
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: d24b
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: bc8f
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: c655
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: fc49
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: ea37
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: 3c1c
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: cc50
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: dc6c
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 848c
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 5ec6
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 8a87
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 3ee9
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: d846
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: 9cb2
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: 66a5
+2023-04-17 15:05:29.109 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: fe17
+2023-04-17 15:05:29.109 <TRACE> ospf1: DBDES packet sent to nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.109 <TRACE> ospf1:     length   28
+2023-04-17 15:05:29.109 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.109 <TRACE> ospf1:     mtu      9000
+2023-04-17 15:05:29.109 <TRACE> ospf1:     imms     
+2023-04-17 15:05:29.109 <TRACE> ospf1:     ddseq    2055136705
+2023-04-17 15:05:29.109 <TRACE> ospf1: Neighbor 0.0.0.33 on veth031001 changed state from Exchange to Full
+2023-04-17 15:05:29.152 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.152 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.152 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.152 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 7, Sum: 60aa
+2023-04-17 15:05:29.152 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 7, Sum: 1ff3
+2023-04-17 15:05:29.152 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.152 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.152 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 7
+2023-04-17 15:05:29.152 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.152 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.152 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.152 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 8, Sum: 60aa
+2023-04-17 15:05:29.152 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 8, Sum: 1ff3
+2023-04-17 15:05:29.152 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.152 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.152 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.152 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.152 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.162 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.162 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.162 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.162 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 8, Sum: 60aa
+2023-04-17 15:05:29.162 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 8, Sum: 1ff3
+2023-04-17 15:05:29.162 <TRACE> ospf1: Updating router state for area 0.0.0.0
+2023-04-17 15:05:29.162 <TRACE> ospf1: Originating LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000002
+2023-04-17 15:05:29.162 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.162 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.162 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.162 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.162 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.162 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.172 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.172 <TRACE> ospf1:     length   76
+2023-04-17 15:05:29.172 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.172 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000002, Age: 1, Sum: 583c
+2023-04-17 15:05:29.172 <TRACE> ospf1: LSUPD packet flooded via veth031000
+2023-04-17 15:05:29.172 <TRACE> ospf1:     length   76
+2023-04-17 15:05:29.172 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.172 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000002, Age: 1, Sum: 583c
+2023-04-17 15:05:29.174 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.174 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.174 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.174 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 9, Sum: ba5f
+2023-04-17 15:05:29.174 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 9, Sum: 3d03
+2023-04-17 15:05:29.174 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 9
+2023-04-17 15:05:29.174 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.174 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 9
+2023-04-17 15:05:29.174 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.174 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.174 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.174 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 10, Sum: ba5f
+2023-04-17 15:05:29.174 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 10, Sum: 3d03
+2023-04-17 15:05:29.182 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.182 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.182 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.182 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.182 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.184 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.184 <TRACE> ospf1:     length   152
+2023-04-17 15:05:29.184 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.184 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000002, Age: 1, Sum: c0cf
+2023-04-17 15:05:29.184 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 10, Sum: ba5f
+2023-04-17 15:05:29.184 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 10, Sum: 3d03
+2023-04-17 15:05:29.184 <TRACE> ospf1: Skipping LSA received in less that MinLSArrival
+2023-04-17 15:05:29.281 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.281 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.281 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.281 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 11, Sum: c05a
+2023-04-17 15:05:29.281 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 11, Sum: 1d26
+2023-04-17 15:05:29.281 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 11
+2023-04-17 15:05:29.281 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.281 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 11
+2023-04-17 15:05:29.281 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.281 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.281 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.281 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 12, Sum: c05a
+2023-04-17 15:05:29.281 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 12, Sum: 1d26
+2023-04-17 15:05:29.281 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.281 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.281 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.281 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.281 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.291 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.291 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.291 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.291 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 12, Sum: c05a
+2023-04-17 15:05:29.291 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 12, Sum: 1d26
+2023-04-17 15:05:29.299 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.299 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.299 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.299 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 12, Sum: b464
+2023-04-17 15:05:29.299 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 12, Sum: 5ddf
+2023-04-17 15:05:29.299 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 12
+2023-04-17 15:05:29.299 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.299 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 12
+2023-04-17 15:05:29.299 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.299 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.299 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.299 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 13, Sum: b464
+2023-04-17 15:05:29.299 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 13, Sum: 5ddf
+2023-04-17 15:05:29.300 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.300 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.300 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.300 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 12, Sum: ae69
+2023-04-17 15:05:29.300 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 12, Sum: 7dbc
+2023-04-17 15:05:29.300 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 12
+2023-04-17 15:05:29.300 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 12
+2023-04-17 15:05:29.300 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.300 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.300 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.300 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 13, Sum: ae69
+2023-04-17 15:05:29.300 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 13, Sum: 7dbc
+2023-04-17 15:05:29.302 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.302 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.302 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.302 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.302 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.309 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.309 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.309 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.309 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 13, Sum: b464
+2023-04-17 15:05:29.309 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 13, Sum: 5ddf
+2023-04-17 15:05:29.310 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.310 <TRACE> ospf1:     length   60
+2023-04-17 15:05:29.310 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.310 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000002, Age: 7, Sum: 34ae
+2023-04-17 15:05:29.310 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000002, Age: 7
+2023-04-17 15:05:29.310 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:29.310 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.310 <TRACE> ospf1:     length   60
+2023-04-17 15:05:29.310 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.310 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000002, Age: 8, Sum: 34ae
+2023-04-17 15:05:29.310 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:29.310 <TRACE> ospf1:     length   72
+2023-04-17 15:05:29.310 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:29.310 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000001, Age: 12, Sum: fd30
+2023-04-17 15:05:29.310 <TRACE> ospf1: Installing LSA: Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000001, Age: 12
+2023-04-17 15:05:29.310 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:29.310 <TRACE> ospf1:     length   72
+2023-04-17 15:05:29.310 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:29.310 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000001, Age: 13, Sum: fd30
+2023-04-17 15:05:29.310 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.310 <TRACE> ospf1:     length   96
+2023-04-17 15:05:29.310 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.310 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 13, Sum: ae69
+2023-04-17 15:05:29.310 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 13, Sum: 7dbc
+2023-04-17 15:05:29.312 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:29.312 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:29.312 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:29.312 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:29.312 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:29.320 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.320 <TRACE> ospf1:     length   60
+2023-04-17 15:05:29.320 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.320 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000002, Age: 8, Sum: 34ae
+2023-04-17 15:05:29.320 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:29.320 <TRACE> ospf1:     length   72
+2023-04-17 15:05:29.320 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:29.320 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000001, Age: 13, Sum: fd30
+2023-04-17 15:05:31.422 <TRACE> ospf1: LSACK packet sent via veth031000
+2023-04-17 15:05:31.422 <TRACE> ospf1:     length   1416
+2023-04-17 15:05:31.422 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 091e
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000001, Age: 5, Sum: 9bcb
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: 2705
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000001, Age: 7, Sum: fa7b
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 0f19
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000001, Age: 6, Sum: 7bee
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 210a
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000001, Age: 7, Sum: 1b58
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: 33fa
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000001, Age: 8, Sum: bac1
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: 6ca0
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000001, Age: 6, Sum: de3a
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6, Sum: 729b
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000001, Age: 6, Sum: be5d
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7e91
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000001, Age: 6, Sum: 7ea3
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: f62d
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000001, Age: 6, Sum: fb62
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: 0323
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000001, Age: 7, Sum: bba8
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: fc28
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000001, Age: 8, Sum: db85
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 1514
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000001, Age: 9, Sum: 5b12
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 1b0f
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000001, Age: 9, Sum: 3b35
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: 2dff
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000001, Age: 9, Sum: da9e
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: a86e
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000001, Age: 8, Sum: 9d99
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 9082
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000001, Age: 10, Sum: 1e0d
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: a273
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000001, Age: 10, Sum: bd76
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: 9c78
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000001, Age: 10, Sum: dd53
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: e43c
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000001, Age: 10, Sum: 5cf8
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: de41
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000001, Age: 7, Sum: 7cd5
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: f032
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000001, Age: 7, Sum: 1c3f
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: d24b
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000001, Age: 7, Sum: bc8f
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: c655
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000001, Age: 7, Sum: fc49
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: ea37
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000001, Age: 8, Sum: 3c1c
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: cc50
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000001, Age: 8, Sum: dc6c
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 848c
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000001, Age: 8, Sum: 5ec6
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 8a87
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000001, Age: 8, Sum: 3ee9
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: d846
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000001, Age: 9, Sum: 9cb2
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: 66a5
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000001, Age: 10, Sum: fe17
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 7, Sum: 60aa
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000001, Age: 7, Sum: 1ff3
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 9, Sum: ba5f
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000001, Age: 9, Sum: 3d03
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 11, Sum: c05a
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000001, Age: 11, Sum: 1d26
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 12, Sum: b464
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000001, Age: 12, Sum: 5ddf
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 12, Sum: ae69
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000001, Age: 12, Sum: 7dbc
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000002, Age: 7, Sum: 34ae
+2023-04-17 15:05:31.422 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000001, Age: 12, Sum: fd30
+2023-04-17 15:05:31.443 <TRACE> ospf1: LSACK packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:31.443 <TRACE> ospf1:     length   56
+2023-04-17 15:05:31.443 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:31.443 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 5, Sum: 7896
+2023-04-17 15:05:31.443 <TRACE> ospf1:     LSA      Type: 2009, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000001, Age: 5, Sum: 9e80
+2023-04-17 15:05:31.443 <TRACE> ospf1: Strange LSACK from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:31.443 <TRACE> ospf1:     Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32
+2023-04-17 15:05:31.443 <TRACE> ospf1:     I have: Seq: 80000002, Age:    0, Sum: 583c
+2023-04-17 15:05:31.443 <TRACE> ospf1:     It has: Seq: 80000001, Age:    5, Sum: 7896
+2023-04-17 15:05:33.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.970 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.970 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.970 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.970 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000002, Age: 6, Sum: 9d28
+2023-04-17 15:05:33.970 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000002, Age: 6
+2023-04-17 15:05:33.970 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:33.970 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.970 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.970 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.970 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000002, Age: 7, Sum: 9d28
+2023-04-17 15:05:33.970 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.970 <TRACE> ospf1:     length   212
+2023-04-17 15:05:33.970 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.970 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000002, Age: 5, Sum: 153a
+2023-04-17 15:05:33.970 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000002, Age: 6, Sum: 9d28
+2023-04-17 15:05:33.970 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000002, Age: 5
+2023-04-17 15:05:33.970 <TRACE> ospf1: LSACK packet sent to nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.970 <TRACE> ospf1:     length   36
+2023-04-17 15:05:33.970 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.970 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000002, Age: 6, Sum: 9d28
+2023-04-17 15:05:33.970 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.970 <TRACE> ospf1:     length   140
+2023-04-17 15:05:33.970 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.970 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000002, Age: 6, Sum: 153a
+2023-04-17 15:05:33.972 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:33.972 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:33.972 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:33.972 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:33.972 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:33.972 <TRACE> ospf1.ipv6 > added [best] fc00:1:7::/128 0L 4G unicast
+2023-04-17 15:05:33.972 <TRACE> kernel2.ipv6 < added fc00:1:7::/128 0L 4G unicast
+2023-04-17 15:05:33.972 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:7::/128 0L 4G unicast
+2023-04-17 15:05:33.972 <TRACE> ospf1.ipv6 > added [best] fc00:1:6::/128 0L 4G unicast
+2023-04-17 15:05:33.972 <TRACE> kernel2.ipv6 < added fc00:1:6::/128 0L 4G unicast
+2023-04-17 15:05:33.972 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:6::/128 0L 4G unicast
+2023-04-17 15:05:33.974 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.974 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.974 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.974 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000002, Age: 7, Sum: 4278
+2023-04-17 15:05:33.974 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000002, Age: 7
+2023-04-17 15:05:33.974 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:33.974 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.974 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.974 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.974 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000002, Age: 8, Sum: 4278
+2023-04-17 15:05:33.975 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.975 <TRACE> ospf1:     length   140
+2023-04-17 15:05:33.975 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.975 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000002, Age: 6, Sum: 2cb6
+2023-04-17 15:05:33.975 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000002, Age: 6
+2023-04-17 15:05:33.975 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.975 <TRACE> ospf1:     length   140
+2023-04-17 15:05:33.975 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.975 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000002, Age: 7, Sum: 2cb6
+2023-04-17 15:05:33.976 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.976 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.976 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.976 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000002, Age: 7, Sum: dfb0
+2023-04-17 15:05:33.976 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000002, Age: 7
+2023-04-17 15:05:33.976 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.976 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.976 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.976 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000002, Age: 8, Sum: dfb0
+2023-04-17 15:05:33.980 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:33.980 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.980 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:33.980 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000002, Age: 7, Sum: 9d28
+2023-04-17 15:05:33.981 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:33.981 <TRACE> ospf1:     length   140
+2023-04-17 15:05:33.981 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:33.981 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000002, Age: 6, Sum: 153a
+2023-04-17 15:05:33.982 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:33.982 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:33.982 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:33.982 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:33.982 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:33.982 <TRACE> ospf1.ipv6 > added [best] fc00:1:3::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> kernel2.ipv6 < added fc00:1:3::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:3::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> ospf1.ipv6 > added [best] fc00:1:2::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> kernel2.ipv6 < added fc00:1:2::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:2::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> ospf1.ipv6 > added [best] fc00:1:a::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> kernel2.ipv6 < added fc00:1:a::/128 0L 4G unicast
+2023-04-17 15:05:33.982 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:a::/128 0L 4G unicast
+2023-04-17 15:05:33.985 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:33.985 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.985 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:33.985 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000002, Age: 8, Sum: 4278
+2023-04-17 15:05:33.985 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:33.985 <TRACE> ospf1:     length   140
+2023-04-17 15:05:33.985 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:33.985 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000002, Age: 7, Sum: 2cb6
+2023-04-17 15:05:33.986 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:33.986 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.986 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:33.986 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000002, Age: 8, Sum: dfb0
+2023-04-17 15:05:33.993 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.993 <TRACE> ospf1:     length   76
+2023-04-17 15:05:33.993 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.993 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000002, Age: 8, Sum: d5ea
+2023-04-17 15:05:33.993 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000002, Age: 8
+2023-04-17 15:05:33.993 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:33.993 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.993 <TRACE> ospf1:     length   76
+2023-04-17 15:05:33.993 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.993 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000002, Age: 9, Sum: d5ea
+2023-04-17 15:05:33.995 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.995 <TRACE> ospf1:     length   124
+2023-04-17 15:05:33.995 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.995 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000002, Age: 8, Sum: f983
+2023-04-17 15:05:33.995 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000002, Age: 8
+2023-04-17 15:05:33.995 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.995 <TRACE> ospf1:     length   124
+2023-04-17 15:05:33.995 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.995 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000002, Age: 9, Sum: f983
+2023-04-17 15:05:33.996 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.996 <TRACE> ospf1:     length   108
+2023-04-17 15:05:33.996 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.996 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000002, Age: 9, Sum: 351e
+2023-04-17 15:05:33.996 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000002, Age: 9
+2023-04-17 15:05:33.996 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.996 <TRACE> ospf1:     length   108
+2023-04-17 15:05:33.996 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.996 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000002, Age: 10, Sum: 351e
+2023-04-17 15:05:33.996 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:33.996 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.996 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:33.996 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000002, Age: 9, Sum: 3c65
+2023-04-17 15:05:33.996 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000002, Age: 9
+2023-04-17 15:05:33.996 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:33.996 <TRACE> ospf1:     length   92
+2023-04-17 15:05:33.996 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:33.996 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000002, Age: 10, Sum: 3c65
+2023-04-17 15:05:34.002 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.002 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.002 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.002 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.002 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 > added [best] fc00:1:1::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> kernel2.ipv6 < added fc00:1:1::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 > added [best] fc00:1::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> kernel2.ipv6 < added fc00:1::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 > added [best] fc00:1:4::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> kernel2.ipv6 < added fc00:1:4::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:4::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 > added [best] fc00:1:9::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> kernel2.ipv6 < added fc00:1:9::/128 0L 4G unicast
+2023-04-17 15:05:34.002 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:9::/128 0L 4G unicast
+2023-04-17 15:05:34.003 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.003 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.003 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.003 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000002, Age: 9, Sum: d5ea
+2023-04-17 15:05:34.005 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.005 <TRACE> ospf1:     length   124
+2023-04-17 15:05:34.005 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.005 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000002, Age: 9, Sum: f983
+2023-04-17 15:05:34.006 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.006 <TRACE> ospf1:     length   108
+2023-04-17 15:05:34.006 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.006 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000002, Age: 10, Sum: 351e
+2023-04-17 15:05:34.006 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.006 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.006 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.006 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000002, Age: 10, Sum: 3c65
+2023-04-17 15:05:34.007 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.007 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.007 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.007 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000002, Age: 7, Sum: dbcd
+2023-04-17 15:05:34.007 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000002, Age: 7
+2023-04-17 15:05:34.007 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.007 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.007 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.007 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.007 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000002, Age: 8, Sum: dbcd
+2023-04-17 15:05:34.012 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.012 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.012 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.012 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.012 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.012 <TRACE> ospf1.ipv6 > added [best] fc00:1:8::/128 0L 4G unicast
+2023-04-17 15:05:34.012 <TRACE> kernel2.ipv6 < added fc00:1:8::/128 0L 4G unicast
+2023-04-17 15:05:34.012 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:8::/128 0L 4G unicast
+2023-04-17 15:05:34.016 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.016 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.016 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.016 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000002, Age: 8, Sum: 8e2e
+2023-04-17 15:05:34.016 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000002, Age: 8
+2023-04-17 15:05:34.016 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.016 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.016 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.016 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.016 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000002, Age: 9, Sum: 8e2e
+2023-04-17 15:05:34.018 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.018 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.018 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.018 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000002, Age: 8, Sum: dbcd
+2023-04-17 15:05:34.022 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.022 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.022 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.022 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.022 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.022 <TRACE> ospf1.ipv6 > added [best] fc00:1:d::/128 0L 4G unicast
+2023-04-17 15:05:34.022 <TRACE> kernel2.ipv6 < added fc00:1:d::/128 0L 4G unicast
+2023-04-17 15:05:34.022 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:d::/128 0L 4G unicast
+2023-04-17 15:05:34.022 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.022 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.022 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.022 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000002, Age: 8, Sum: 6b12
+2023-04-17 15:05:34.022 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000002, Age: 8
+2023-04-17 15:05:34.022 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.022 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.022 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.022 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.022 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000002, Age: 9, Sum: 6b12
+2023-04-17 15:05:34.026 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.026 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.026 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.026 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000002, Age: 9, Sum: 8e2e
+2023-04-17 15:05:34.027 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.027 <TRACE> ospf1:     length   124
+2023-04-17 15:05:34.027 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.027 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000002, Age: 9, Sum: 39b9
+2023-04-17 15:05:34.027 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000002, Age: 9
+2023-04-17 15:05:34.027 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.027 <TRACE> ospf1:     length   124
+2023-04-17 15:05:34.027 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.027 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000002, Age: 10, Sum: 39b9
+2023-04-17 15:05:34.032 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.032 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.032 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.032 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000002, Age: 9, Sum: 6b12
+2023-04-17 15:05:34.032 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.032 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.032 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.032 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.032 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.032 <TRACE> ospf1.ipv6 > added [best] fc00:1:d::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> kernel2.ipv6 < replaced fc00:1:d::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:d::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> ospf1.ipv6 > added [best] fc00:1:e::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> kernel2.ipv6 < added fc00:1:e::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:e::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> ospf1.ipv6 > added [best] fc00:1:10::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> kernel2.ipv6 < added fc00:1:10::/128 0L 4G unicast
+2023-04-17 15:05:34.032 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:10::/128 0L 4G unicast
+2023-04-17 15:05:34.036 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.036 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.036 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.036 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000002, Age: 7, Sum: 8554
+2023-04-17 15:05:34.036 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000002, Age: 7
+2023-04-17 15:05:34.036 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.036 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.036 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.036 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.036 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000002, Age: 8, Sum: 8554
+2023-04-17 15:05:34.037 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.037 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.037 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.037 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000002, Age: 8, Sum: efa4
+2023-04-17 15:05:34.037 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000002, Age: 8
+2023-04-17 15:05:34.037 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.037 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.037 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.037 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000002, Age: 9, Sum: efa4
+2023-04-17 15:05:34.037 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.037 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.037 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.037 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000002, Age: 9, Sum: 06cd
+2023-04-17 15:05:34.037 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000002, Age: 9
+2023-04-17 15:05:34.037 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.037 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.037 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.037 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000002, Age: 10, Sum: 06cd
+2023-04-17 15:05:34.037 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.037 <TRACE> ospf1:     length   124
+2023-04-17 15:05:34.037 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.037 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000002, Age: 10, Sum: 39b9
+2023-04-17 15:05:34.038 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.038 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.038 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.038 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000002, Age: 9, Sum: ed78
+2023-04-17 15:05:34.038 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000002, Age: 9
+2023-04-17 15:05:34.038 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.038 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.038 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.038 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000002, Age: 10, Sum: ed78
+2023-04-17 15:05:34.042 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.042 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.042 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.042 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.042 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 > added [best] fc00:1:b::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> kernel2.ipv6 < added fc00:1:b::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:b::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 > added [best] fc00:1:c::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> kernel2.ipv6 < added fc00:1:c::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:c::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 > added [best] fc00:1:f::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> kernel2.ipv6 < added fc00:1:f::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:f::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 > added [best] fc00:1:11::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> kernel2.ipv6 < added fc00:1:11::/128 0L 4G unicast
+2023-04-17 15:05:34.042 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:11::/128 0L 4G unicast
+2023-04-17 15:05:34.046 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.046 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.046 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.046 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000002, Age: 8, Sum: 8554
+2023-04-17 15:05:34.047 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.047 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.047 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.047 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000002, Age: 9, Sum: efa4
+2023-04-17 15:05:34.048 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.048 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.048 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.048 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000002, Age: 10, Sum: 06cd
+2023-04-17 15:05:34.048 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.048 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.048 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.048 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000002, Age: 10, Sum: ed78
+2023-04-17 15:05:34.064 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.064 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.064 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.064 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000002, Age: 10, Sum: 21c2
+2023-04-17 15:05:34.064 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000002, Age: 10
+2023-04-17 15:05:34.064 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.064 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.064 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.064 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.064 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000002, Age: 11, Sum: 21c2
+2023-04-17 15:05:34.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:34.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:34.072 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.072 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.072 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.072 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.072 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.072 <TRACE> ospf1.ipv6 > added [best] fc00:1:5::/128 0L 4G unicast
+2023-04-17 15:05:34.072 <TRACE> kernel2.ipv6 < added fc00:1:5::/128 0L 4G unicast
+2023-04-17 15:05:34.072 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:5::/128 0L 4G unicast
+2023-04-17 15:05:34.074 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.074 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.074 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.074 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000002, Age: 11, Sum: 21c2
+2023-04-17 15:05:34.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.132 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.132 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.132 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.132 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000002, Age: 8, Sum: 3329
+2023-04-17 15:05:34.132 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000002, Age: 8
+2023-04-17 15:05:34.132 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.132 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.132 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.132 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.132 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000002, Age: 9, Sum: 3329
+2023-04-17 15:05:34.132 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.132 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.132 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.132 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.132 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.132 <TRACE> ospf1.ipv6 > added [best] fc00:1:1b::/128 0L 4G unicast
+2023-04-17 15:05:34.132 <TRACE> kernel2.ipv6 < added fc00:1:1b::/128 0L 4G unicast
+2023-04-17 15:05:34.132 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1b::/128 0L 4G unicast
+2023-04-17 15:05:34.142 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.142 <TRACE> ospf1:     length   92
+2023-04-17 15:05:34.142 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.142 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000002, Age: 9, Sum: 3329
+2023-04-17 15:05:34.152 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.152 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.152 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.152 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000002, Age: 6, Sum: a1e4
+2023-04-17 15:05:34.152 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000002, Age: 6
+2023-04-17 15:05:34.152 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.152 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.152 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.152 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.152 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000002, Age: 7, Sum: a1e4
+2023-04-17 15:05:34.162 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.162 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.162 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.162 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.162 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.162 <TRACE> ospf1.ipv6 > added [best] fc00:1:21::/128 0L 4G unicast
+2023-04-17 15:05:34.162 <TRACE> kernel2.ipv6 < added fc00:1:21::/128 0L 4G unicast
+2023-04-17 15:05:34.162 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:21::/128 0L 4G unicast
+2023-04-17 15:05:34.163 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.163 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.163 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.163 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000002, Age: 7, Sum: a1e4
+2023-04-17 15:05:34.163 <TRACE> ospf1: LSUPD packet sent to nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.163 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.163 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.163 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000002, Age: 5, Sum: 583c
+2023-04-17 15:05:34.163 <TRACE> ospf1: LSUPD packet sent to nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.163 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.163 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.163 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000002, Age: 5, Sum: 583c
+2023-04-17 15:05:34.174 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.174 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.174 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.174 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000002, Age: 7, Sum: 6f2d
+2023-04-17 15:05:34.174 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000002, Age: 7
+2023-04-17 15:05:34.174 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.174 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.174 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.174 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.174 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000002, Age: 8, Sum: 6f2d
+2023-04-17 15:05:34.176 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.176 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.176 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.176 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000002, Age: 5, Sum: c0cf
+2023-04-17 15:05:34.176 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000002, Age: 5
+2023-04-17 15:05:34.176 <TRACE> ospf1: LSUPD packet flooded via veth031000
+2023-04-17 15:05:34.176 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.176 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.176 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000002, Age: 6, Sum: c0cf
+2023-04-17 15:05:34.181 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.181 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.181 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.181 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000002, Age: 7, Sum: 0a8d
+2023-04-17 15:05:34.181 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000002, Age: 7
+2023-04-17 15:05:34.181 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.181 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.181 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.181 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000002, Age: 8, Sum: 0a8d
+2023-04-17 15:05:34.182 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.182 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.182 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.182 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.182 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 > added [best] fc00:1:1b::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> kernel2.ipv6 < replaced fc00:1:1b::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1b::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 > added [best] fc00:1:1e::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> kernel2.ipv6 < added fc00:1:1e::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1e::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 > added [best] fc00:1:20::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> kernel2.ipv6 < added fc00:1:20::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:20::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 > added [best] fc00:1:23::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> kernel2.ipv6 < added fc00:1:23::/128 0L 4G unicast
+2023-04-17 15:05:34.182 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:23::/128 0L 4G unicast
+2023-04-17 15:05:34.185 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.185 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.185 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.185 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000002, Age: 8, Sum: 6f2d
+2023-04-17 15:05:34.187 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.187 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.187 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.187 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000002, Age: 6, Sum: c0cf
+2023-04-17 15:05:34.191 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.191 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.191 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.191 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000002, Age: 8, Sum: 0a8d
+2023-04-17 15:05:34.205 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.205 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.205 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.205 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000002, Age: 8, Sum: 8147
+2023-04-17 15:05:34.205 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000002, Age: 8
+2023-04-17 15:05:34.205 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.205 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.205 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.205 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.205 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000002, Age: 9, Sum: 8147
+2023-04-17 15:05:34.208 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.208 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.208 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.208 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000002, Age: 9, Sum: 70f9
+2023-04-17 15:05:34.208 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000002, Age: 9
+2023-04-17 15:05:34.208 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.208 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.208 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.208 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000002, Age: 10, Sum: 70f9
+2023-04-17 15:05:34.212 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.212 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.212 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.212 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.212 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.212 <TRACE> ospf1.ipv6 > added [best] fc00:1:1d::/128 0L 4G unicast
+2023-04-17 15:05:34.212 <TRACE> kernel2.ipv6 < added fc00:1:1d::/128 0L 4G unicast
+2023-04-17 15:05:34.212 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1d::/128 0L 4G unicast
+2023-04-17 15:05:34.212 <TRACE> ospf1.ipv6 > added [best] fc00:1:1c::/128 0L 4G unicast
+2023-04-17 15:05:34.212 <TRACE> kernel2.ipv6 < added fc00:1:1c::/128 0L 4G unicast
+2023-04-17 15:05:34.212 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1c::/128 0L 4G unicast
+2023-04-17 15:05:34.212 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.212 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.212 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.212 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000002, Age: 7, Sum: 384b
+2023-04-17 15:05:34.212 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000002, Age: 7
+2023-04-17 15:05:34.212 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.212 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.212 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.212 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.212 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000002, Age: 8, Sum: 384b
+2023-04-17 15:05:34.215 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.215 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.215 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.215 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000002, Age: 9, Sum: 8147
+2023-04-17 15:05:34.219 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.219 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.219 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.219 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000002, Age: 10, Sum: 70f9
+2023-04-17 15:05:34.222 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.222 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.222 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.222 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.222 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.222 <TRACE> ospf1.ipv6 > added [best] fc00:1:f::/128 0L 4G unicast
+2023-04-17 15:05:34.222 <TRACE> kernel2.ipv6 < replaced fc00:1:f::/128 0L 4G unicast
+2023-04-17 15:05:34.222 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:f::/128 0L 4G unicast
+2023-04-17 15:05:34.222 <TRACE> ospf1.ipv6 > added [best] fc00:1:22::/128 0L 4G unicast
+2023-04-17 15:05:34.222 <TRACE> kernel2.ipv6 < added fc00:1:22::/128 0L 4G unicast
+2023-04-17 15:05:34.222 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:22::/128 0L 4G unicast
+2023-04-17 15:05:34.222 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.222 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.222 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.222 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000002, Age: 8, Sum: 384b
+2023-04-17 15:05:34.244 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.244 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.244 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.244 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000002, Age: 8, Sum: 622c
+2023-04-17 15:05:34.244 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000002, Age: 8
+2023-04-17 15:05:34.244 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.244 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.244 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.244 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.244 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000002, Age: 9, Sum: 622c
+2023-04-17 15:05:34.252 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.252 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.252 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.252 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.252 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.252 <TRACE> ospf1.ipv6 > added [best] fc00:1:12::/128 0L 4G unicast
+2023-04-17 15:05:34.252 <TRACE> kernel2.ipv6 < added fc00:1:12::/128 0L 4G unicast
+2023-04-17 15:05:34.252 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:12::/128 0L 4G unicast
+2023-04-17 15:05:34.254 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.254 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.254 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.254 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000002, Age: 9, Sum: 622c
+2023-04-17 15:05:34.261 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.261 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.261 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.261 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000002, Age: 9, Sum: 07b9
+2023-04-17 15:05:34.261 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000002, Age: 9
+2023-04-17 15:05:34.261 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.261 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.261 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.261 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.261 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000002, Age: 10, Sum: 07b9
+2023-04-17 15:05:34.262 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.262 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.262 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.262 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.262 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.262 <TRACE> ospf1.ipv6 > added [best] fc00:1:14::/128 0L 4G unicast
+2023-04-17 15:05:34.262 <TRACE> kernel2.ipv6 < added fc00:1:14::/128 0L 4G unicast
+2023-04-17 15:05:34.262 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:14::/128 0L 4G unicast
+2023-04-17 15:05:34.269 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.269 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.269 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.269 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000002, Age: 8, Sum: cad2
+2023-04-17 15:05:34.269 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000002, Age: 8
+2023-04-17 15:05:34.269 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.269 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.269 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.269 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.269 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000002, Age: 9, Sum: cad2
+2023-04-17 15:05:34.271 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.271 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.271 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.271 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000002, Age: 10, Sum: 07b9
+2023-04-17 15:05:34.272 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.272 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.272 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.272 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.272 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.272 <TRACE> ospf1.ipv6 > added [best] fc00:1:17::/128 0L 4G unicast
+2023-04-17 15:05:34.272 <TRACE> kernel2.ipv6 < added fc00:1:17::/128 0L 4G unicast
+2023-04-17 15:05:34.272 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:17::/128 0L 4G unicast
+2023-04-17 15:05:34.279 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.279 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.279 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.279 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000002, Age: 9, Sum: cad2
+2023-04-17 15:05:34.281 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.281 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.281 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.281 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000003, Age: 5, Sum: 7a41
+2023-04-17 15:05:34.281 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000003, Age: 5
+2023-04-17 15:05:34.281 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.281 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.281 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.281 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.281 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000003, Age: 6, Sum: 7a41
+2023-04-17 15:05:34.282 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.282 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.282 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.282 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.282 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.282 <TRACE> ospf1.ipv6 > added [best] fc00:1:18::/128 0L 4G unicast
+2023-04-17 15:05:34.282 <TRACE> kernel2.ipv6 < added fc00:1:18::/128 0L 4G unicast
+2023-04-17 15:05:34.282 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:18::/128 0L 4G unicast
+2023-04-17 15:05:34.292 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.292 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.292 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.292 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000003, Age: 6, Sum: 7a41
+2023-04-17 15:05:34.295 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.295 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.295 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.295 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000002, Age: 10, Sum: 0fdf
+2023-04-17 15:05:34.295 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000002, Age: 10
+2023-04-17 15:05:34.295 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.295 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.295 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.295 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.295 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000002, Age: 11, Sum: 0fdf
+2023-04-17 15:05:34.299 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.299 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.299 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.299 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000002, Age: 10, Sum: c5f6
+2023-04-17 15:05:34.299 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000002, Age: 10
+2023-04-17 15:05:34.299 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.299 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.299 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.299 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000002, Age: 11, Sum: c5f6
+2023-04-17 15:05:34.302 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.302 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.302 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.302 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.302 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.302 <TRACE> ospf1.ipv6 > added [best] fc00:1:19::/128 0L 4G unicast
+2023-04-17 15:05:34.302 <TRACE> kernel2.ipv6 < added fc00:1:19::/128 0L 4G unicast
+2023-04-17 15:05:34.302 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:19::/128 0L 4G unicast
+2023-04-17 15:05:34.303 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.303 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.303 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.303 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000003, Age: 7, Sum: 9b1e
+2023-04-17 15:05:34.303 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000003, Age: 7
+2023-04-17 15:05:34.303 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:34.303 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.303 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.303 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.303 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000003, Age: 8, Sum: 9b1e
+2023-04-17 15:05:34.305 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.305 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.305 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.305 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000002, Age: 11, Sum: 0fdf
+2023-04-17 15:05:34.309 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.309 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.309 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.309 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000002, Age: 11, Sum: c5f6
+2023-04-17 15:05:34.310 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.310 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.310 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.310 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000003, Age: 7, Sum: f5ba
+2023-04-17 15:05:34.310 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000003, Age: 7
+2023-04-17 15:05:34.310 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.310 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.310 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.310 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000003, Age: 8, Sum: f5ba
+2023-04-17 15:05:34.310 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:34.310 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.310 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:34.310 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000002, Age: 12, Sum: 16d3
+2023-04-17 15:05:34.310 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000002, Age: 12
+2023-04-17 15:05:34.310 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:34.310 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.310 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:34.310 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000002, Age: 13, Sum: 16d3
+2023-04-17 15:05:34.312 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:34.312 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:34.312 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:34.312 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:34.312 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:34.313 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.313 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.313 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.313 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000003, Age: 8, Sum: 9b1e
+2023-04-17 15:05:34.320 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.320 <TRACE> ospf1:     length   76
+2023-04-17 15:05:34.320 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.320 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000003, Age: 8, Sum: f5ba
+2023-04-17 15:05:34.320 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:34.320 <TRACE> ospf1:     length   60
+2023-04-17 15:05:34.320 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:34.320 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000002, Age: 13, Sum: 16d3
+2023-04-17 15:05:36.422 <TRACE> ospf1: LSACK packet sent via veth031000
+2023-04-17 15:05:36.422 <TRACE> ospf1:     length   696
+2023-04-17 15:05:36.422 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.7, Seq: 80000002, Age: 6, Sum: 9d28
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.8, Seq: 80000002, Age: 5, Sum: 153a
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.3, Seq: 80000002, Age: 7, Sum: 4278
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.11, Seq: 80000002, Age: 6, Sum: 2cb6
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.4, Seq: 80000002, Age: 7, Sum: dfb0
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.10, Seq: 80000002, Age: 8, Sum: d5ea
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000002, Age: 8, Sum: f983
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000002, Age: 9, Sum: 351e
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.5, Seq: 80000002, Age: 9, Sum: 3c65
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.9, Seq: 80000002, Age: 7, Sum: dbcd
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.14, Seq: 80000002, Age: 8, Sum: 8e2e
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.17, Seq: 80000002, Age: 8, Sum: 6b12
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.15, Seq: 80000002, Age: 9, Sum: 39b9
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.12, Seq: 80000002, Age: 7, Sum: 8554
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.16, Seq: 80000002, Age: 8, Sum: efa4
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.13, Seq: 80000002, Age: 9, Sum: 06cd
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.18, Seq: 80000002, Age: 9, Sum: ed78
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.6, Seq: 80000002, Age: 10, Sum: 21c2
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.28, Seq: 80000002, Age: 8, Sum: 3329
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.34, Seq: 80000002, Age: 6, Sum: a1e4
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.36, Seq: 80000002, Age: 7, Sum: 6f2d
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.31, Seq: 80000002, Age: 7, Sum: 0a8d
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.29, Seq: 80000002, Age: 8, Sum: 8147
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.30, Seq: 80000002, Age: 9, Sum: 70f9
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.35, Seq: 80000002, Age: 7, Sum: 384b
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.19, Seq: 80000002, Age: 8, Sum: 622c
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000002, Age: 9, Sum: 07b9
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.24, Seq: 80000002, Age: 8, Sum: cad2
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.25, Seq: 80000003, Age: 5, Sum: 7a41
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000002, Age: 10, Sum: 0fdf
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.20, Seq: 80000002, Age: 10, Sum: c5f6
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.22, Seq: 80000003, Age: 7, Sum: 9b1e
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.27, Seq: 80000003, Age: 7, Sum: f5ba
+2023-04-17 15:05:36.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000002, Age: 12, Sum: 16d3
+2023-04-17 15:05:36.444 <TRACE> ospf1: LSACK packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:36.444 <TRACE> ospf1:     length   36
+2023-04-17 15:05:36.444 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:36.444 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000002, Age: 5, Sum: 583c
+2023-04-17 15:05:36.578 <TRACE> ospf1: LSACK packet sent via veth031001
+2023-04-17 15:05:36.578 <TRACE> ospf1:     length   36
+2023-04-17 15:05:36.578 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:36.578 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.33, Seq: 80000002, Age: 5, Sum: c0cf
+2023-04-17 15:05:36.589 <TRACE> ospf1: LSACK packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:36.589 <TRACE> ospf1:     length   36
+2023-04-17 15:05:36.589 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:36.589 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.32, Seq: 80000002, Age: 5, Sum: 583c
+2023-04-17 15:05:38.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:39.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:39.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:39.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:39.192 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:39.192 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.192 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:39.192 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000003, Age: 12, Sum: 4a6a
+2023-04-17 15:05:39.192 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000003, Age: 12
+2023-04-17 15:05:39.192 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:39.192 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:39.192 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.192 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:39.192 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000003, Age: 13, Sum: 4a6a
+2023-04-17 15:05:39.192 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:39.192 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:39.192 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:39.192 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:39.192 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:39.202 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:39.202 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.202 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:39.202 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000003, Age: 13, Sum: 4a6a
+2023-04-17 15:05:39.261 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:39.261 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.261 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:39.261 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000003, Age: 9, Sum: c6cd
+2023-04-17 15:05:39.261 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000003, Age: 9
+2023-04-17 15:05:39.261 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:39.261 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:39.261 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.261 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:39.261 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000003, Age: 10, Sum: c6cd
+2023-04-17 15:05:39.262 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:39.262 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:39.262 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:39.262 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:39.262 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 > added [best] fc00:1:13::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> kernel2.ipv6 < added fc00:1:13::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:13::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 > added [best] fc00:1:15::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> kernel2.ipv6 < added fc00:1:15::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:15::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 > added [best] fc00:1:16::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> kernel2.ipv6 < added fc00:1:16::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:16::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 > added [best] fc00:1:1a::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> kernel2.ipv6 < added fc00:1:1a::/128 0L 4G unicast
+2023-04-17 15:05:39.262 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1a::/128 0L 4G unicast
+2023-04-17 15:05:39.271 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:39.271 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.271 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:39.271 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000003, Age: 10, Sum: c6cd
+2023-04-17 15:05:39.295 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:39.295 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.295 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:05:39.295 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000003, Age: 10, Sum: 3289
+2023-04-17 15:05:39.295 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000003, Age: 10
+2023-04-17 15:05:39.295 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:05:39.295 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:05:39.295 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.295 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:39.295 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000003, Age: 11, Sum: 3289
+2023-04-17 15:05:39.302 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:05:39.302 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:05:39.302 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:05:39.302 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:05:39.302 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:05:39.302 <TRACE> ospf1.ipv6 > added [best] fc00:1:1a::/128 0L 4G unicast
+2023-04-17 15:05:39.302 <TRACE> kernel2.ipv6 < replaced fc00:1:1a::/128 0L 4G unicast
+2023-04-17 15:05:39.302 <TRACE> ospf1.ipv6 < rejected by protocol fc00:1:1a::/128 0L 4G unicast
+2023-04-17 15:05:39.306 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:39.306 <TRACE> ospf1:     length   76
+2023-04-17 15:05:39.306 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:05:39.306 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000003, Age: 11, Sum: 3289
+2023-04-17 15:05:41.422 <TRACE> ospf1: LSACK packet sent via veth031000
+2023-04-17 15:05:41.422 <TRACE> ospf1:     length   76
+2023-04-17 15:05:41.422 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:05:41.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.23, Seq: 80000003, Age: 12, Sum: 4a6a
+2023-04-17 15:05:41.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.21, Seq: 80000003, Age: 9, Sum: c6cd
+2023-04-17 15:05:41.422 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.26, Seq: 80000003, Age: 10, Sum: 3289
+2023-04-17 15:05:43.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:44.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:44.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:44.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:48.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:49.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:49.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:49.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:53.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:54.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:54.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:54.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:05:58.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:05:59.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:05:59.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:05:59.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:03.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:04.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:04.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:04.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:08.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:09.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:09.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:09.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:13.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:14.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:14.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:14.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:18.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:19.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:19.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:19.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:23.239 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:23.239 <TRACE> ospf1:     length   124
+2023-04-17 15:06:23.239 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:06:23.239 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000003, Age: 4, Sum: 0ad6
+2023-04-17 15:06:23.239 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000003, Age: 4
+2023-04-17 15:06:23.239 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:06:23.239 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:06:23.239 <TRACE> ospf1:     length   124
+2023-04-17 15:06:23.239 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:06:23.239 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000003, Age: 5, Sum: 0ad6
+2023-04-17 15:06:23.250 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:23.250 <TRACE> ospf1:     length   124
+2023-04-17 15:06:23.250 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:06:23.250 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000003, Age: 5, Sum: 0ad6
+2023-04-17 15:06:23.250 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:06:23.250 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:06:23.250 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:06:23.250 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:06:23.250 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:06:23.250 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:23.250 <TRACE> ospf1:     length   108
+2023-04-17 15:06:23.250 <TRACE> ospf1:     router   0.0.0.8
+2023-04-17 15:06:23.250 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000003, Age: 5, Sum: 4571
+2023-04-17 15:06:23.250 <TRACE> ospf1: Installing LSA: Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000003, Age: 5
+2023-04-17 15:06:23.250 <TRACE> ospf1: Scheduling routing table calculation
+2023-04-17 15:06:23.250 <TRACE> ospf1: LSUPD packet flooded via veth031001
+2023-04-17 15:06:23.250 <TRACE> ospf1:     length   108
+2023-04-17 15:06:23.250 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:06:23.250 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000003, Age: 6, Sum: 4571
+2023-04-17 15:06:23.259 <TRACE> ospf1: Starting routing table calculation
+2023-04-17 15:06:23.259 <TRACE> ospf1: Starting routing table calculation for area 0.0.0.0
+2023-04-17 15:06:23.259 <TRACE> ospf1: Starting routing table calculation for inter-area (area 0.0.0.0)
+2023-04-17 15:06:23.259 <TRACE> ospf1: Starting routing table calculation for ext routes
+2023-04-17 15:06:23.259 <TRACE> ospf1: Starting routing table synchronization
+2023-04-17 15:06:23.260 <TRACE> ospf1: LSUPD packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:23.260 <TRACE> ospf1:     length   108
+2023-04-17 15:06:23.260 <TRACE> ospf1:     router   0.0.0.33
+2023-04-17 15:06:23.260 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000003, Age: 6, Sum: 4571
+2023-04-17 15:06:23.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:23.922 <TRACE> ospf1: LSACK packet sent via veth031000
+2023-04-17 15:06:23.922 <TRACE> ospf1:     length   56
+2023-04-17 15:06:23.922 <TRACE> ospf1:     router   0.0.0.32
+2023-04-17 15:06:23.922 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.1, Seq: 80000003, Age: 4, Sum: 0ad6
+2023-04-17 15:06:23.922 <TRACE> ospf1:     LSA      Type: 2001, Id: 0.0.0.0, Rt: 0.0.0.2, Seq: 80000003, Age: 5, Sum: 4571
+2023-04-17 15:06:24.062 <TRACE> device1: Scanning interfaces
+2023-04-17 15:06:24.067 <TRACE> kernel2: Scanning routing table
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:1::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:2::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:3::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:4::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:5::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:6::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:7::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:8::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:9::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:a::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:b::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:c::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:d::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:e::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:f::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:10::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:11::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:12::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:13::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:14::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:15::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:16::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:17::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:18::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:19::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:1a::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:1b::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:1c::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:1d::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:1e::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:1f::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:20::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:21::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:22::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: fc00:1:23::/128: seen
+2023-04-17 15:06:24.067 <TRACE> kernel2: Pruning table master6
+2023-04-17 15:06:24.067 <TRACE> kernel2: Pruning inherited routes
+2023-04-17 15:06:24.067 <TRACE> kernel1: Scanning routing table
+2023-04-17 15:06:24.067 <TRACE> kernel1: Pruning table master4
+2023-04-17 15:06:24.067 <TRACE> kernel1: Pruning inherited routes
+2023-04-17 15:06:24.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:24.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:24.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:28.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:29.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:29.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:29.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:33.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:34.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:34.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:34.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:38.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:39.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:39.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:39.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:43.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:44.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:44.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:44.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:48.921 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:49.067 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:49.067 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:49.077 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:53.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:54.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:54.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:54.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001
+2023-04-17 15:06:58.922 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.8 on veth031000
+2023-04-17 15:06:59.068 <TRACE> ospf1: HELLO packet sent via veth031000
+2023-04-17 15:06:59.068 <TRACE> ospf1: HELLO packet sent via veth031001
+2023-04-17 15:06:59.078 <TRACE> ospf1: HELLO packet received from nbr 0.0.0.33 on veth031001

@@ -1,0 +1,7 @@
+type: cmds
+description: "Remote config (AS2)"
+cmds:
+  - ip tunnel add gre-gre mode gre remote 10.0.0.1 local 10.0.2.2
+  - ip addr add 172.16.0.2/24 dev gre-gre
+  - ip link set dev gre-gre up
+  - ip route add 192.168.68.1/32 via 172.16.0.1 dev gre-gre metric 600

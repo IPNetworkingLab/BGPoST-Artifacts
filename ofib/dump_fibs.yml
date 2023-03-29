@@ -1,0 +1,26 @@
+- name: Fetch FIBs
+  block:
+
+    - name: Dump FIBs
+      ansible.builtin.shell:
+        cmd: "rm -r /tmp/dumps; for i in $(ip netns list | sed -e 's/ .*//g'); do ip netns exec $i /root/env/bin/netutils fib collect $i; done"
+
+    - name: Find FIB dumps
+      register: fib_dumps
+      ansible.builtin.find:
+        recurse: true
+        paths: "/tmp/dumps"
+
+    - name: Fetch dumps
+      with_items: "{{ fib_dumps.files }}"
+      loop_control:
+        loop_var: inner_item
+      ansible.builtin.fetch:
+        src: "{{ inner_item.path }}"
+        dest: "/tmp/dumps"
+    
+    - name: Move dumps
+      delegate_to: 127.0.0.1
+      run_once: true
+      ansible.builtin.shell:
+        cmd: "mv /tmp/dumps/*/tmp/dumps/* /tmp/dumps && find /tmp/dumps/ -depth -empty -delete && mv /tmp/dumps {{ base }}/{{ run }}/{{ path }}"

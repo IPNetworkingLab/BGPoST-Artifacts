@@ -1,0 +1,48 @@
+- interfaces:
+  - direction: forward
+    link: r1:eth0-r2:eth1
+    name: eth0
+  - direction: forward
+    link: r1:eth3-c1:eth2
+    name: eth3
+  - direction: forward
+    link: r1:eth7-s1:eth6
+    name: eth7
+  namespace: r1
+  role: r1
+- interfaces:
+  - direction: backward
+    link: r1:eth0-r2:eth1
+    name: eth1
+  - direction: forward
+    link: r2:eth5-c2:eth4
+    name: eth5
+  - direction: forward
+    link: r2:eth9-s2:eth8
+    name: eth9
+  namespace: r2
+  role: r2
+- interfaces:
+  - direction: backward
+    link: r1:eth3-c1:eth2
+    name: eth2
+  namespace: c1
+  role: c1
+- interfaces:
+  - direction: backward
+    link: r1:eth7-s1:eth6
+    name: eth6
+  namespace: s1
+  role: s1
+- interfaces:
+  - direction: backward
+    link: r2:eth5-c2:eth4
+    name: eth4
+  namespace: c2
+  role: c2
+- interfaces:
+  - direction: backward
+    link: r2:eth9-s2:eth8
+    name: eth8
+  namespace: s2
+  role: s2

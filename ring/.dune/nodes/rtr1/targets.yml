@@ -1,0 +1,5 @@
+rtr1.bird.quic.conf: /tmp/rtr1.bird.quic.conf
+rtr1.bird.tcp.conf: /tmp/rtr1.bird.tcp.conf
+rtr1.bird.tcp_ao.conf: /tmp/rtr1.bird.tcp_ao.conf
+rtr1.bird.tls.conf: /tmp/rtr1.bird.tls.conf
+rtr1.bird.tls_ao.conf: /tmp/rtr1.bird.tls_ao.conf

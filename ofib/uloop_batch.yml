@@ -1,0 +1,27 @@
+- name: uLoop batched measures
+  hosts: compute
+  vars:
+    base1: "/dev/shm/ofib"
+    n_nodes: 9
+    n_xp: 10
+  tasks:
+
+    - name: Experiments
+      loop: "{{ ['bird_classic', 'bird_ofib'] | product(range(0,n_xp)) | list }}"
+      register: run
+      vars:
+        base: "{{base1}}/{{item[0]}}"
+        ospf_version: "{{item[0]}}"
+        run: "{{item[1]}}"
+      ansible.builtin.include_tasks:
+        file: uloop.yml
+
+          #- name: Results collection
+          #loop: "{{ ['bird_classic', 'bird_ofib'] | product(range(0,n_xp)) | list }}"
+          #register: run
+          #vars:
+          #base: "{{base1}}/{{item[0]}}"
+          #ospf_version: "{{item[0]}}"
+          #run: "{{item[1]}}"
+          #ansible.builtin.include_tasks:
+          #file: single_parse.yml

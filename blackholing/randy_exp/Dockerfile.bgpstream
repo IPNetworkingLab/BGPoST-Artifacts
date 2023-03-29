@@ -1,0 +1,31 @@
+FROM ubuntu:22.04
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+             build-essential curl zlib1g-dev libbz2-dev \
+             libcurl4-openssl-dev librdkafka-dev autoconf-archive \
+             gnu-standards libtool gettext curl wget
+
+RUN cd /opt && \
+    curl -LO https://github.com/LibtraceTeam/wandio/archive/refs/tags/4.2.6-1.tar.gz && \
+    tar xf 4.2.6-1.tar.gz && \
+    cd wandio-4.2.6-1 && \
+    autoreconf -si && \
+    ./configure --prefix=/usr && \
+    make -j$(nproc) && \
+    make install && \
+    cd /opt && \
+    rm -rf wandio-4.2.6-1 4.2.6-1.tar.gz
+
+RUN cd /opt && \
+    curl -LO https://github.com/CAIDA/libbgpstream/releases/download/v2.2.0/libbgpstream-2.2.0.tar.gz && \
+    tar xf libbgpstream-2.2.0.tar.gz && \
+    cd libbgpstream-2.2.0 && \
+    sed -i '13436 i #define _GNU_SOURCE' configure && \
+    ./configure --prefix=/usr && \
+    make -j$(nproc) && \
+    make install && \
+    cd /opt && \
+    rm -rf libbgpstream-2.2.0 libbgpstream-2.2.0.tar.gz
+

@@ -1,0 +1,23 @@
+name: "auto_uplink_bird2"
+local_ip: "192.168.42.2"
+remote_ip: "192.168.42.1"
+remote_sni: "bird2.router"
+local_as: 65002
+remote_as: 65001
+export_static_rte:
+  - "8.8.8.0/24"
+  - "8.8.8.128/25"
+fn_filters: |
+  filter rr_export {
+    if ( net = 8.8.8.0/24{24,32} ) then {
+      bgp_med = 88;
+      bgp_community.add ((65002,4242));
+      accept;
+    }
+    else accept;
+  }
+af_routes_filtering: |
+  ipv4 {
+      import all;
+      export filter rr_export;
+  };

@@ -1,0 +1,144 @@
+%matplotlib qt
+import matplotlib.pyplot as plt
+import numpy as np
+
+import ipaddress
+import collections
+
+#base_path = 'data/nantes-bordeaux_nantes-toulouse/ofib'
+base_path = 'data/ofib'
+ospf_version = ['classic', 'ofib']
+dests = ['001', '004', '035']
+base_addr = ipaddress.ip_address('fc00:1::')
+
+def ip_to_id(ip):
+    return (int(ip) - int(base_addr)) >> 80
+
+def get_label(src, dst):
+    return f'{src} - {dst}'
+
+n_runs = 10
+durations = {key: {} for key in ospf_version}
+
+def padding(array):
+    global n_runs
+    return array + [0 for i in range(0, n_runs - len(array))] if len(array) < n_runs else array
+
+def cmp_fec_boxplot(all_data, x_labels):
+    fig, ax = plt.subplots()
+
+    colors = ["lightblue", "tomato"]
+    hatches = ["///", "..."]
+
+    boxes = list()
+    labels = list()
+
+    for i in range(len(all_data)):
+        (res, label) = all_data[i]  # This has the form (list of boxplot values, label)
+    
+        c = colors[i]
+        black = "black"
+        mediancolor = black
+        linewidth = 1
+        box = ax.boxplot(res, patch_artist=True,
+                boxprops=dict(color=black, linewidth=linewidth, facecolor="white"),
+                capprops=dict(color=black, linewidth=linewidth),
+		whiskerprops=dict(color=black, linewidth=linewidth),
+                flierprops=dict(color=black, markeredgecolor=c),
+                medianprops=dict(color=mediancolor, linewidth=linewidth),
+		positions=[1 + j * 3 + i for j in range(len(res))],
+		showfliers = label == "oFIB"
+	)
+        for b in box["boxes"]:
+            b.set_facecolor(c)
+            b.set_hatch(hatches[i])
+        boxes.append(box)
+        labels.append(label)
+    
+    ax.set_xticks([1.5 + j * 3 for j in range(len(res))])
+    ax.set_xticklabels(x_labels)
+    ax.yaxis.grid(True, which="both")
+    ax.xaxis.grid(True)
+    ax.xaxis.set_tick_params(direction='in', which='both')
+    ax.yaxis.set_tick_params(direction='in', which='both')
+    ax.legend([i["boxes"][0] for i in boxes], labels, frameon=True, facecolor="white", edgecolor="white", framealpha=1)
+    ax.set_xlabel("Tested path")
+    ax.set_ylabel("Maximum micro-loops duration [ms]")
+    plt.savefig("test.pdf")
+    plt.show()
+
+for version in ospf_version:
+    for i in range(0, n_runs):
+        path = f'{base_path}/bird_{version}/{i}'
+        for step in ['before', 'after']:
+            print(f'[{version}-{i}] Verifying FIB <{step}> reconfiguration')
+            !netutils fib compare renater_{step}.ntf {path}/{step} > /dev/null 2>&1
+            if _exit_code != 0:
+        #         print(f'[{version}-{i}] Unexpected FIB <{step}> link reconfiguration at run <{i}>')
+                exit(1)
+
+        loops = {}
+
+        for dest in dests:
+            gaps = !python udp_parser.py {path}/ping_{dest}.log | grep GAP | sed -e 's/GAP //g'
+            dst = int(dest)
+            for gap in gaps:
+                gap_content = gap.split(' ')
+                src, _ = gap_content[0].split(']:')
+                src = ip_to_id(ipaddress.ip_address(src[1:]))
+                diff = int(gap_content[-1]) - int(gap_content[1])
+                label = get_label(src, dst)
+
+                try:
+                    loops[label].append(diff)
+                except KeyError:
+                    loops[label] = [diff]
+        max_loops = {label: max(diffs) for label, diffs in loops.items()}
+        print(loops)
+        print(max_loops)
+
+        for label, max_loop in max_loops.items():
+            try:
+                durations[version][label].append(max_loop)
+            except KeyError:
+                durations[version][label] = [max_loop]
+	
+for label in durations['classic'].keys():
+    if label not in durations['ofib']:
+        durations['ofib'][label] = [0] * n_runs
+
+print(durations)
+
+classic_dur = collections.OrderedDict(sorted(durations['classic'].items()))
+labels = [label for label, _ in classic_dur.items()]
+
+# Sort the labels according to the median value of the classic boxplots.
+labels = sorted(labels, key=lambda i: np.median(classic_dur[i]))
+del labels[labels.index('4 - 35')]
+del labels[labels.index('0 - 35')]
+labels.append('4 - 35')
+labels.append('0 - 35')
+
+classic = [padding(classic_dur[i]) for i in labels]
+# classic = [padding(values) for _, values in classic_dur.items()]
+# plt.boxplot(classic, labels=labels, showfliers=False)
+
+ofib_dur = collections.OrderedDict(sorted(durations['ofib'].items()))
+ofib = [padding(ofib_dur[i]) for i in labels]
+# ofib = [padding(values) for _, values in ofib_dur.items()]
+# plt.boxplot(ofib, labels=labels, showfliers=False)
+
+all_data = list()
+all_data.append((classic, "Classic"))
+all_data.append((ofib, "oFIB"))
+
+cmp_fec_boxplot(all_data, labels)
+
+# print("classic", classic)
+# print("ofib", ofib)
+
+# plt.xlabel('Tested paths')
+# plt.ylabel('Estimated maximum micro-loops duration [ms]')
+# plt.title('Micro-loops evaluation')
+# plt.savefig('plot.pdf')
+# plt.show()

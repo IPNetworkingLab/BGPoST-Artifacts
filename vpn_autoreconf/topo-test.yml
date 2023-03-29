@@ -1,0 +1,34 @@
+name: vpnauto
+
+topology:
+  defaults:
+    kind: linux
+    image: bird:latest
+    binds:
+      - ./cfgs:/etc/bird
+  nodes:
+    ce1:
+      exec:
+        - ip addr add 1.2.3.4/24 dev lo
+        - ip addr add 10.40.41.5/31 dev eth1
+        - bird -c /etc/bird/ce1.conf
+    ce2:
+      exec:
+        - ip addr add 1.2.3.5/24 dev lo
+        - ip addr add 10.40.41.7/31 dev eth1
+        - bird -c /etc/bird/ce2.conf
+    pe1:
+      exec:
+        - ip addr add 10.40.41.2/31 dev eth2
+        - ip addr add 10.40.41.4/31 dev eth1
+        - bird -c /etc/bird/pe1.conf
+    pe2:
+      exec:
+        - ip addr add 10.40.41.3/31 dev eth2
+        - ip addr add 10.40.41.6/31 dev eth1
+        - bird -c /etc/bird/pe2.conf
+
+  links:
+    - endpoints: ["ce1:eth1", "pe1:eth1"]
+    - endpoints: ["pe1:eth2", "pe2:eth2"]
+    - endpoints: ["ce2:eth1", "pe2:eth1"]
