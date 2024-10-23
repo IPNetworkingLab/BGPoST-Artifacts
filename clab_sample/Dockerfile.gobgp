@@ -1,0 +1,24 @@
+FROM alpine:3.20 AS base
+
+RUN apk update && \
+    apk upgrade --available
+
+
+FROM base AS builder
+RUN apk add git go && \
+    git clone https://github.com/osrg/gobgp.git /opt/gobgp && \
+    cd /opt/gobgp && \
+    git checkout v3.30.0 && \
+    go build ./cmd/gobgp && \
+    go build ./cmd/gobgpd
+
+FROM base
+COPY --from=builder /opt/gobgp/gobgp /opt/gobgp/gobgpd /usr/bin
+RUN apk add --no-cache tini && \
+    mkdir /etc/gobgp
+
+ENTRYPOINT [ "/sbin/tini", "--" ]
+CMD [ "/usr/bin/gobgpd",  "-f", "/etc/gobgp/gobgpd.conf"]
+
+
+
