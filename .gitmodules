@@ -3,3 +3,6 @@
 	url = git@forge.uclouvain.be:inl/netutilsg/cert-generator.git
 [submodule "cert-generator/"]
 	url = git@forge.uclouvain.be:inl/netutilsg/cert-generator.git
+[submodule "clab_sample/BGPoTLS"]
+	path = clab_sample/BGPoTLS
+	url = https://github.com/IPNetworkingLab/BGPoTLS.git

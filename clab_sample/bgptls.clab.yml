@@ -1,20 +1,28 @@
 name: BGPoTLS
 
 topology:
+
   defaults:
     kind: linux
     image: bgptls:latest
     sysctls:
       net.ipv6.conf.all.keep_addr_on_down: 1
+    entrypoint: /bin/ash
+    cmd: ""
+
   nodes:
+
     gobgp:
       image: gobgp:latest 
       exec:
         - ip addr add 172.16.0.2/31 dev eth-s1
         - ip addr add fd72:16::2/127 dev eth-s1
         - ip link set dev eth-s1 up
+        - sh -c "/usr/bin/gobgpd -f /etc/gobgp/gobgpd.conf > /var/log/gobgp.log  2>&1 &"
+        - /etc/gobgp/mrt_injecter.sh eth-s1 172.16.0.2 fd72:16::2 /etc/gobgp/bview.20090101.0759.gz
       binds:
         - gobgp:/etc/gobgp
+    
     s1:
       exec:
         - ip addr add 172.16.0.3/31 dev eth-gobgp
@@ -26,8 +34,10 @@ topology:
         - ip link set dev eth-gobgp up
         - ip link set dev eth-s2 up
         - ip link set dev eth-s4 up
+        - /usr/sbin/bird -c /etc/bird/bird.conf
       binds:
         - s1:/etc/bird
+        
     s2:
       binds:
         - s2:/etc/bird
@@ -38,6 +48,8 @@ topology:
         - ip addr add fd72:16::6/127 dev eth-s3
         - ip link set dev eth-s1 up
         - ip link set dev eth-s3 up
+        - /usr/sbin/bird -c /etc/bird/bird.conf
+        
     s3:
       binds:
         - s3:/etc/bird
@@ -48,6 +60,8 @@ topology:
         - ip addr add fd72:16::14/127 dev eth-s6
         - ip link set dev eth-s2 up
         - ip link set dev eth-s6 up
+        - /usr/sbin/bird -c /etc/bird/bird.conf
+        
     s4:
       binds:
         - s4:/etc/bird
@@ -58,6 +72,8 @@ topology:
         - ip addr add fd72:16::10/127 dev eth-s5
         - ip link set dev eth-s1 up
         - ip link set dev eth-s5 up
+        - /usr/sbin/bird -c /etc/bird/bird.conf
+        
     s5:
       binds:
         - s5:/etc/bird
@@ -68,6 +84,8 @@ topology:
         - ip addr add fd72:16::12/127 dev eth-s6
         - ip link set dev eth-s4 up
         - ip link set dev eth-s6 up 
+        - /usr/sbin/bird -c /etc/bird/bird.conf
+
     s6:
       binds:
         - s6:/etc/bird
@@ -78,6 +96,8 @@ topology:
         - ip addr add fd72:16::13/127 dev eth-s5
         - ip link set dev eth-s3 up
         - ip link set dev eth-s5 up
+        - /usr/sbin/bird -c /etc/bird/bird.conf
+        
   links:
     - endpoints: [ "gobgp:eth-s1", "s1:eth-gobgp" ]
     - endpoints: [ "s1:eth-s2", "s2:eth-s1" ]
@@ -86,4 +106,3 @@ topology:
     - endpoints: [ "s4:eth-s5", "s5:eth-s4" ]
     - endpoints: [ "s3:eth-s6", "s6:eth-s3" ]
     - endpoints: [ "s5:eth-s6", "s6:eth-s5" ]
-
