@@ -13,12 +13,14 @@ topology:
   nodes:
 
     gobgp:
-      image: gobgp:latest 
+      image: gobgp:latest
+      # Set again entrypoint and cmd.
+      entrypoint:  /sbin/tini --
+      cmd: /usr/bin/gobgpd -f /etc/gobgp/gobgpd.conf
       exec:
         - ip addr add 172.16.0.2/31 dev eth-s1
         - ip addr add fd72:16::2/127 dev eth-s1
         - ip link set dev eth-s1 up
-        - sh -c "/usr/bin/gobgpd -f /etc/gobgp/gobgpd.conf > /var/log/gobgp.log  2>&1 &"
         - /etc/gobgp/mrt_injecter.sh eth-s1 172.16.0.2 fd72:16::2 /etc/gobgp/bview.20090101.0759.gz
       binds:
         - gobgp:/etc/gobgp
