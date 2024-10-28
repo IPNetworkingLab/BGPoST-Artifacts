@@ -1,7 +1,7 @@
 FROM alpine:3.20 AS base
 
 RUN apk update && \
-    apk upgrade --available
+    apk upgrade --no-cache --available
 
 
 FROM base AS builder
@@ -19,6 +19,4 @@ RUN apk add --no-cache tini && \
 
 ENTRYPOINT [ "/sbin/tini", "--" ]
 CMD [ "/usr/bin/gobgpd",  "-f", "/etc/gobgp/gobgpd.conf"]
-
-
 
