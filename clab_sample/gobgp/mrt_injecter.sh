@@ -15,7 +15,7 @@ fi
 # Wait until gobgpd is running
 MAX_TRIES=10
 CURRENT_TRIES=0
-until [ "$(pidof gobgpd)" -gt 0 ]; do
+until [ "$(pidof gobgpd || echo "0")" -gt 0 ]; do
   if [ "${CURRENT_TRIES}" -gt "${MAX_TRIES}" ]; then
     echo "Tried ${CURRENT_TRIES} times to wait for GoBGP to start, without success. Exiting..."
     exit 1
@@ -23,8 +23,6 @@ until [ "$(pidof gobgpd)" -gt 0 ]; do
   ((CURRENT_TRIES++))
   sleep 1
 done
-
-
 
 TMP_DMP="/tmp/mrt.dump"
 
