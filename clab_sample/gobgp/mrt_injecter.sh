@@ -31,7 +31,7 @@ NH_IPV4="${2}"
 NH_IPV6="${3}"
 MRTDUMP="${4}"
 
-if [[ "${MTDUMP}" == *.gz  ]]; then
+if [[ "${MRTDUMP}" == *.gz  ]]; then
     zcat "${MRTDUMP}" > "${TMP_DMP}"
     MRTDUMP="${TMP_DMP}"
 fi
